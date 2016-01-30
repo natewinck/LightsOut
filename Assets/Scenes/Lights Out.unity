@@ -185,6 +185,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8209278, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209278, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209278, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
   m_IsPrefabParent: 0
@@ -201,6 +213,7 @@ GameObject:
   - 23: {fileID: 813594026}
   - 82: {fileID: 813594025}
   - 114: {fileID: 813594024}
+  - 114: {fileID: 813594030}
   m_Layer: 0
   m_Name: Picture 1
   m_TagString: Untagged
@@ -234,11 +247,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 197b6f9ffe1223343aa4672db3771875, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -359,6 +372,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &813594030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 813594023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb5467595d89f646b3c6866dc313596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundBank:
+  - {fileID: 8300000, guid: 494bd1721199a40c5a79fa3011793556, type: 3}
 --- !u!4 &822814152 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438416, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
@@ -538,6 +564,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8250742, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250742, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

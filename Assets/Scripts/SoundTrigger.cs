@@ -24,7 +24,8 @@ public class SoundTrigger : MonoBehaviour {
   void OnTriggerEnter(Collider c) {
     if (c.CompareTag("Player")) {
       var clip = (AudioClip) soundDeck.Draw();
-      source.PlayOneShot(clip);
+      source.clip = clip;
+	  source.Play();
     }
   }
 }
