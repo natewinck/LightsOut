@@ -4,18 +4,18 @@ using System.Collections.Generic;
 
 public class PlayerFootsteps : MonoBehaviour {
 
-  [SerializeField] private string m_CurrentFloor = "";
-	// Use this for initialization
-	void Start () {
-    Debug.Log ("Hey");
-	}
+  [SerializeField] private GameObject m_CurrentFloor;
 
   // Used with the Character Controller
   void OnControllerColliderHit(ControllerColliderHit hit)
   {
     //Debug.Log ("blahhhhh");
-    if (hit.gameObject.CompareTag("Floor"))
+    if (hit.gameObject.CompareTag("Floor") && m_CurrentFloor != hit.gameObject)
     {
+      // So we don't keep changing the audio clips when we're on the same floor,
+      // Store the object as a reference
+      m_CurrentFloor = hit.gameObject;
+
       //Debug.Log ("Hey that's a wall");
       // Get the audio source from the floor
       List<AudioClip> clips;
