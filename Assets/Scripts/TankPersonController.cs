@@ -19,6 +19,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
+        [SerializeField] private bool m_MouseLookEnabled;
         [SerializeField] private MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
@@ -56,7 +57,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			// m_MouseLook.Init(transform , m_Camera.transform);
+			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
 
@@ -99,7 +100,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
-            Vector3 desiredMove = transform.forward; //transform.forward*m_Input.y + transform.right*m_Input.x;
+            Vector3 desiredMove = transform.forward * m_Input.y; //transform.forward*m_Input.y + transform.right*m_Input.x;
 
             // get a normal for the surface that is being touched to move along it
             RaycastHit hitInfo;
@@ -132,7 +133,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
 
-            // m_MouseLook.UpdateCursorLock();
+            m_MouseLook.UpdateCursorLock();
         }
 
 
@@ -239,7 +240,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void RotateView()
         {
             transform.Rotate(transform.up, m_Input.x * m_TurnSpeed * Time.deltaTime);
-            // m_MouseLook.LookRotation (transform, m_Camera.transform);
+            if (m_MouseLookEnabled) m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
 
