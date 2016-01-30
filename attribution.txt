@@ -1,1 +1,3 @@
 AC_freesound_edited - https://freesound.org/people/ceberation/sounds/235509/ - http://creativecommons.org/licenses/by/3.0/
+
+Fridge - http://www.freesound.org/people/jakobhandersen/sounds/133827/ - http://creativecommons.org/publicdomain/zero/1.0/
