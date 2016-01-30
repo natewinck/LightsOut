@@ -2,14 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerFootsteps : MonoBehaviour {
+public class PlayerWallBrush : MonoBehaviour {
 
   private GameObject m_CurrentFloor;
 
   // Used with the Character Controller
   void OnControllerColliderHit(ControllerColliderHit hit)
   {
-    if (hit.gameObject.CompareTag("Floor") && m_CurrentFloor != hit.gameObject && hit.gameObject.GetComponent<SoundBank>() != null)
+    if (hit.gameObject.CompareTag("Floor") && hit.gameObject.GetComponent<SoundBank>() != null)
     {
       // So we don't keep changing the audio clips when we're on the same floor,
       // Store the object as a reference

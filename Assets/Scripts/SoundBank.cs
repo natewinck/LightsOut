@@ -25,6 +25,10 @@ public class SoundBank : MonoBehaviour
     return clips;
   }
 
+  public List<AudioClip> DrawAll () {
+    return (List<AudioClip>) m_SoundDeck.DrawAll().Cast<AudioClip>().ToList();
+  }
+
   // Update is called once per frame
   void Update () {
 
