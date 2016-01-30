@@ -203,7 +203,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 471644}
   m_Layer: 0
-  m_Name: AC_UNIT
+  m_Name: AC_UNIT_HALLWAY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1038,7 +1038,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6a8f3fd4f4ae4c44b8c20a6f83039c08, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1046,7 +1046,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 4.1
   MinDistance: 1.27
-  MaxDistance: 24.59
+  MaxDistance: 16.56693
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -1112,7 +1112,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6a8f3fd4f4ae4c44b8c20a6f83039c08, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1120,7 +1120,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 4.1
   MinDistance: 1.27
-  MaxDistance: 24.59
+  MaxDistance: 17.67226
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableSpatialization: 1
   gain: 24
-  useInvSqr: 0
+  useInvSqr: 1
   near: 1
   far: 10
   disableRfl: 0
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableSpatialization: 1
   gain: 24
-  useInvSqr: 0
+  useInvSqr: 1
   near: 1
   far: 10
   disableRfl: 0
