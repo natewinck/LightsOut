@@ -14,6 +14,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
+		[SerializeField] private bool m_AllowJump;
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
@@ -63,7 +64,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
+			if (m_AllowJump && !m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
