@@ -23,9 +23,12 @@ public class SoundTrigger : MonoBehaviour {
 
   void OnTriggerEnter(Collider c) {
     if (c.CompareTag("Player")) {
+      // Pull a random clip from the list of sounds
       var clip = (AudioClip) soundDeck.Draw();
+
+      // Replace the AudioSource component with the random clip and play
       source.clip = clip;
-	  source.Play();
+	    source.Play();
     }
   }
 }
