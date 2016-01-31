@@ -5,6 +5,7 @@ using System.Linq;
 
 [RequireComponent (typeof(AudioSource))]
 public class SoundTrigger : MonoBehaviour {
+  public bool IsOneShot;
   public List<AudioClip> SoundBank;
 
   private ShuffleDeck soundDeck;
@@ -30,6 +31,13 @@ public class SoundTrigger : MonoBehaviour {
       // Replace the AudioSource component with the random clip and play
       source.clip = clip;
 	    source.Play();
+
+      if (IsOneShot) StartCoroutine(DisableAfter(clip.length));
     }
+  }
+
+  IEnumerator DisableAfter(float time) {
+    yield return new WaitForSeconds(time);
+    gameObject.SetActive(false);
   }
 }
