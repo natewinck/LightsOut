@@ -10,6 +10,8 @@ public class SoundBank : MonoBehaviour
   public static readonly string FOOTSTEPS = "footsteps";
   public static readonly string MUTTERS = "mutters";
   public static readonly string INTROS = "intros";
+  public static readonly string WINS = "wins";
+  public static readonly string LOSSES = "losses";
 
   [System.Serializable]
   public class NamedClips {
