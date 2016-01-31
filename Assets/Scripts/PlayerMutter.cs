@@ -37,6 +37,7 @@ on "lose":
 public class PlayerMutter : MonoBehaviour {
   public AudioSource m_AudioSource;
 
+  private GameManager m_GameManager;
   private GameState m_StateMachine;
   private SoundBank m_SoundBank;
   private GameObject m_CurrentWall;
@@ -47,14 +48,15 @@ public class PlayerMutter : MonoBehaviour {
   {
     m_LastPos = transform.position;
     m_SoundBank = GetComponent<SoundBank>();
-
   }
 
   void Start() {
-    m_StateMachine = GameManager.instance.gameState;
+    m_GameManager = GameManager.instance;
+    m_StateMachine = m_GameManager.gameState;
     m_StateMachine.On("win", OnWin);
     m_StateMachine.On("lose", OnLose);
     m_StateMachine.On("intro", OnIntro);
+    m_StateMachine.OnTransition("penalty", "playing", AfterPenalty);
     m_StateMachine.TransitionTo("intro");
   }
 
@@ -105,6 +107,17 @@ public class PlayerMutter : MonoBehaviour {
     CheckPenalty(otherSoundBank, other);
   }
 
+  void AfterPenalty(string newState) {
+    var penaltyCount = m_GameManager.penaltyCount;
+
+    // Check for soundbank clip type "penalty1", "penalty2"
+    var clip = m_SoundBank.Draw("penalties" + penaltyCount);
+    if (clip != null) {
+      m_AudioSource.clip = clip;
+      m_AudioSource.PlayDelayed(0.5f);
+    }
+  }
+
   void PlayMutter(SoundBank otherSoundBank, Collider other) {
     // Get a mutter if exists.
     var clip = otherSoundBank.Draw(SoundBank.MUTTERS);
@@ -113,6 +126,10 @@ public class PlayerMutter : MonoBehaviour {
     // Get the child of this (which should be the hand) and add this audio clip to it, then play
     m_AudioSource.clip = clip;
     m_AudioSource.PlayDelayed(0.8f);
+
+    if (m_StateMachine.GetState() == "penalty") {
+      m_StateMachine.DelayedTransitionTo("playing", clip.length + 0.8f);
+    }
   }
 
   void CheckWin(Collider other) {
