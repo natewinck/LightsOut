@@ -61,7 +61,7 @@ public class PlayerWallBrush : MonoBehaviour {
       m_CurrentWall = collision.gameObject;
 
       // Get the audio source from the wall
-      AudioClip clip = m_CurrentWall.GetComponent<SoundBank> ().Draw();
+      AudioClip clip = m_CurrentWall.GetComponent<WallBrushSoundBank> ().Draw();
 
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
       m_HandAudioSource.clip = clip;
@@ -88,8 +88,9 @@ public class PlayerWallBrush : MonoBehaviour {
         m_HandAudioSource.Stop ();
       }
     }
-    else // if velocity is not zero
+    else if (m_IsMoving && collision.gameObject.CompareTag("Wall")) // if velocity is not zero
     {
+      Debug.Log ("hitting");
       if (!m_HandAudioSource.isPlaying)
       {
         m_HandAudioSource.Play ();
@@ -101,8 +102,9 @@ public class PlayerWallBrush : MonoBehaviour {
   {
     //Debug.Log ("exiting");
     // We're no longer in this collider so stop playing the sound
-    if (m_HandAudioSource.isPlaying)
+    if (m_HandAudioSource.isPlaying && collision.gameObject.CompareTag("Wall"))
     {
+      Debug.Log ("exiting");
       m_HandAudioSource.Stop ();
     }
   }

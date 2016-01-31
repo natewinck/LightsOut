@@ -10,11 +10,23 @@ public class PlayerWallBump : MonoBehaviour {
   private bool m_IsMoving;
   private float m_Velocity;
 
+  public GameObject AudioFront;
+  public GameObject AudioBack;
+
+  private AudioSource m_AudioFront;
+  private AudioSource m_AudioBack;
+
   void Awake()
   {
     // Get the child object's audio source, which is on the hand
     m_HandAudioSource = GetComponentInChildren<AudioSource>();
     m_LastPos = transform.position;
+
+    m_AudioFront = AudioFront.GetComponent<AudioSource> ();
+    m_AudioBack = AudioBack.GetComponent<AudioSource> ();
+
+    // Get forward direction from parent
+    //transform.rota
   }
 
   void Update()
@@ -36,8 +48,31 @@ public class PlayerWallBump : MonoBehaviour {
 
   void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.CompareTag ("Wall")) {
+    if (collision.gameObject.CompareTag ("Wall") && collision.gameObject.GetComponent<WallBumpSoundBank>() != null) {
       Debug.Log ("You hit the wall with force " + m_Velocity);
+
+
+
+      // Store the object as a reference
+      m_CurrentWall = collision.gameObject;
+
+      // Get the audio source from the wall
+      AudioClip clip = m_CurrentWall.GetComponent<WallBumpSoundBank> ().Draw(); // All walls MUST have 2 sound banks
+
+      foreach (ContactPoint contact in collision.contacts) {
+        Debug.DrawRay (contact.point, contact.normal, Color.white, 2.0f);
+        
+        // Was it behind or in front?
+        if (Vector3.Dot (-contact.normal, transform.forward) >= 0.0f) {
+          // In front
+          m_AudioFront.clip = clip;
+          m_AudioFront.Play ();
+        } else {
+          // In back
+          m_AudioBack.clip = clip;
+          m_AudioBack.Play ();
+        }
+      }
     }
     /*Debug.Log ("I'm collisioning with " + collision.gameObject.name);
     if (collision.gameObject.CompareTag("Wall") && collision.gameObject.GetComponent<SoundBank>() != null)

@@ -6,6 +6,9 @@ using System.Linq;
 public class SoundBank : MonoBehaviour
 {
   public List<AudioClip> SoundClips;
+  //public string name;
+  // Instead of using name, I'm cheating and making brushing sounds first
+  // and bumping sounds second, always.
 
   private ShuffleDeck m_SoundDeck;
 
