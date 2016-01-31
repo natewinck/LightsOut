@@ -17,12 +17,14 @@ public class GameManager : MonoBehaviour {
 
   void Update () {
     if (Input.GetKeyDown(KeyCode.Escape)) {
+      Debug.Log("Quit pressed!");
       Application.Quit();
     }
   }
 
   void OnPenalty(string oldState) {
     penaltyCount++;
+    Debug.Log(penaltyCount + " of " + PenaltiesBeforeLoss + " penalties");
     if (penaltyCount >= PenaltiesBeforeLoss) {
       gameState.TransitionTo("lose");
     }
@@ -30,13 +32,16 @@ public class GameManager : MonoBehaviour {
 
   // Reload current scene.
   void OnReplayLevel(string oldState) {
+    Debug.Log("Reloading level for retry.");
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
   }
 
   void OnNextLevel(string oldState) {
+    Debug.Log("Next level!");
     var scene = SceneManager.GetActiveScene();
     if (scene.buildIndex == SceneManager.sceneCount - 1) {
       // Play "all done" sound? Credits?
+      Debug.Log("No more levels! Quitting!");
       Application.Quit();
     } else {
       // Load the next scene per build order in Build Settings.
