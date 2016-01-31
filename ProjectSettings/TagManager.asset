@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Floor
+  - MutterBox
   layers:
   - Default
   - TransparentFX

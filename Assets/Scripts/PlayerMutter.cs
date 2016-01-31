@@ -49,17 +49,34 @@ public class PlayerMutter : MonoBehaviour {
     }*/
   }
 
+  void OnTriggerEnter(Collider other) {
+    if (other.CompareTag("MutterBox") && other.GetComponent<SoundBank>() != null && !m_MouthAudioSource.isPlaying) {
+      Debug.Log ("I'm collisioning with Mutter Box");
+      // So we don't keep changing the audio clips when we're on the same floor,
+      // Store the object as a reference
+      m_CurrentWall = other.gameObject;
+
+      // Get the audio source from the wall
+      AudioClip clip = m_CurrentWall.GetComponent<SoundBank> ().Draw(SoundBank.MUTTERS);
+
+      // Get the child of this (which should be the hand) and add this audio clip to it, then play
+      m_MouthAudioSource.clip = clip;
+      m_MouthAudioSource.PlayDelayed(0.8f);
+    }
+  }
+      /*
   void OnCollisionEnter(Collision collision)
   {
     //Debug.Log ("I'm collisioning with " + collision.gameObject.name);
-    if (collision.gameObject.CompareTag("Wall") && collision.gameObject.GetComponent<SoundBank>() != null)
+    if (collision.gameObject.CompareTag("MutterBox") && collision.gameObject.GetComponent<SoundBank>() != null)
     {
+      Debug.Log ("I'm collisioning with Mutter Box");
       // So we don't keep changing the audio clips when we're on the same floor,
       // Store the object as a reference
       m_CurrentWall = collision.gameObject;
 
       // Get the audio source from the wall
-      AudioClip clip = m_CurrentWall.GetComponent<SoundBank> ().Draw(SoundBank.WALLBRUSHES);
+      AudioClip clip = m_CurrentWall.GetComponent<SoundBank> ().Draw(SoundBank.MUTTERS);
 
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
       m_MouthAudioSource.clip = clip;
@@ -72,6 +89,8 @@ public class PlayerMutter : MonoBehaviour {
     }
   }
 
+*/
+
   void OnCollisionStay(Collision collision)
   {
     // Vector3 velocity = collision.relativeVelocity;
@@ -79,7 +98,7 @@ public class PlayerMutter : MonoBehaviour {
     // Only play audio when the velocity when we're moving
     //Debug.Log(velocity.x + ", " + velocity.y + ", " + velocity.z);
     //Debug.Log(velocity.magnitude);
-    if (!m_IsMoving)
+    /*if (!m_IsMoving)
     {
       if (m_MouthAudioSource.isPlaying)
       {
@@ -93,17 +112,18 @@ public class PlayerMutter : MonoBehaviour {
       {
         m_MouthAudioSource.Play ();
       }
-    }
+    }*/
   }
 
   void OnCollisionExit(Collision collision)
   {
-    //Debug.Log ("exiting");
+    /*//Debug.Log ("exiting");
     // We're no longer in this collider so stop playing the sound
     if (m_MouthAudioSource.isPlaying && collision.gameObject.CompareTag("Wall"))
     {
       Debug.Log ("exiting");
       m_MouthAudioSource.Stop ();
     }
+    */
   }
 }
