@@ -265,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155546}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 17.84, y: 1, z: 8.66}
+  m_LocalPosition: {x: 25.9, y: 1, z: 8.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 494538}
@@ -991,21 +991,25 @@ MonoBehaviour:
     clipList:
     - {fileID: 8300000, guid: b1e86560f905f824daab3905d7d08bc3, type: 3}
     - {fileID: 8300000, guid: 8a183cc0f205743408a02a879c658557, type: 3}
+    - {fileID: 8300000, guid: a892c002ff42dfe4ab194ed6f1b35657, type: 3}
+    - {fileID: 8300000, guid: e0b720432692f49df8e86d86bdb60f4c, type: 3}
+    - {fileID: 8300000, guid: 41cad54332916e444bab3105f2920c21, type: 3}
+    - {fileID: 8300000, guid: 48e13a84db0244a08b89d61f6e6774f6, type: 3}
+    - {fileID: 8300000, guid: 94f900a4fbf8e80489426cd43be51f3e, type: 3}
+    - {fileID: 8300000, guid: c81967f433d7e2640b7560eda61097cd, type: 3}
     - {fileID: 8300000, guid: 64c3aa053eccd0043a16add1080ecb72, type: 3}
     - {fileID: 8300000, guid: 70b820653e9da2b4585b4ffb26c7277d, type: 3}
+    - {fileID: 8300000, guid: f1d36d75e0ada4abb9fa61cf99e9efc9, type: 3}
+    - {fileID: 8300000, guid: 9524c0c72e6300849b37c6fdc3f1e211, type: 3}
+    - {fileID: 8300000, guid: a7b023282dfb66c4aaae8848c4568185, type: 3}
     - {fileID: 8300000, guid: 15438e288d6c4ae4eac6830175ddfa3a, type: 3}
     - {fileID: 8300000, guid: 349e941a368d1014e834a0c471a2dded, type: 3}
+    - {fileID: 8300000, guid: dbd40c1a36a484078a77de23bc01e185, type: 3}
     - {fileID: 8300000, guid: b52499da85c06784b8ec542eece4bc5a, type: 3}
-    - {fileID: 8300000, guid: 1c487b1f23572664c99cd7f82be02db6, type: 3}
+    - {fileID: 8300000, guid: efd72dbbbb93c400a8aa39328a81ff27, type: 3}
     - {fileID: 8300000, guid: c28bf9bc2fe218b43ad2c2fc6105dff9, type: 3}
     - {fileID: 8300000, guid: f20f183d4859790478624b174fa6b6c5, type: 3}
-    - {fileID: 8300000, guid: a9f19783a13eb7048aff6e054953bbda, type: 3}
-    - {fileID: 8300000, guid: 840b0a96c64107743b4d77561ecfc80d, type: 3}
-    - {fileID: 8300000, guid: 9574f0c839baa594cbf7db047a5e7d8b, type: 3}
-    - {fileID: 8300000, guid: 1459bf5ab31b21c488a5f535af914dae, type: 3}
-    - {fileID: 8300000, guid: 0295448d24615f340b93bb9824e084c1, type: 3}
-    - {fileID: 8300000, guid: cb34284275265ab4e853414d0294c105, type: 3}
-    - {fileID: 8300000, guid: cdd436fb905c6a54d8593533cb86ca1b, type: 3}
+    - {fileID: 8300000, guid: 1c487b1f23572664c99cd7f82be02db6, type: 3}
   - name: penalties1
     clipList:
     - {fileID: 8300000, guid: 2b7a2879652d37b43baffc161b2eee2c, type: 3}
@@ -1116,7 +1120,7 @@ MonoBehaviour:
   m_IsWalking: 0
   m_WalkSpeed: 4
   m_RunSpeed: 3
-  m_TurnSpeed: 110
+  m_TurnSpeed: 180
   m_RunstepLenghten: 0.7
   m_AllowJump: 0
   m_JumpSpeed: 10

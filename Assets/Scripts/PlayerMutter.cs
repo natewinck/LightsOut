@@ -53,7 +53,7 @@ public class PlayerMutter : MonoBehaviour {
   void Start() {
     m_GameManager = GameManager.instance;
     m_StateMachine = m_GameManager.gameState;
-    m_StateMachine.On("win", OnWin);
+    m_StateMachine.OnTransition("playing", "win", OnWin);
     m_StateMachine.On("lose", OnLose);
     m_StateMachine.On("intro", OnIntro);
     m_StateMachine.OnTransition("penalty", "playing", AfterPenalty);
