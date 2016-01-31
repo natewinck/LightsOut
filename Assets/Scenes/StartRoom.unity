@@ -211,7 +211,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11418636, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
       propertyPath: SoundList.Array.data[0].clipList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 443488, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
       propertyPath: m_LocalPosition.x

@@ -164,15 +164,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452658, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1278583587 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 452658, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
-  m_PrefabInternal: {fileID: 1278583586}
 --- !u!1 &2028559187
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,12 +192,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2028559187}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.707106, z: 0, w: 0.7071076}
+  m_LocalPosition: {x: 17.84, y: 1, z: 8.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1278583587}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!114 &2028559189
 MonoBehaviour:
   m_ObjectHideFlags: 0
