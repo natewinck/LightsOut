@@ -28,16 +28,24 @@ public class SoundTrigger : MonoBehaviour {
       // Pull a random clip from the list of sounds
       var clip = (AudioClip) soundDeck.Draw();
 
-      // Replace the AudioSource component with the random clip and play
-      source.clip = clip;
-	    source.Play();
+      if (clip == null) {
+        if (isOneShot) DisableSelf();
+      } else {
+        // Replace the AudioSource component with the random clip and play
+        source.clip = clip;
+  	    source.Play();
 
-      if (IsOneShot) StartCoroutine(DisableAfter(clip.length));
+        if (IsOneShot) StartCoroutine(DisableAfter(clip.length));
+      }
     }
   }
 
   IEnumerator DisableAfter(float time) {
     yield return new WaitForSeconds(time);
+    DisableSelf();
+  }
+
+  void DisableSelf() {
     gameObject.SetActive(false);
   }
 }
