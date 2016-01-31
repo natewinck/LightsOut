@@ -29,7 +29,7 @@ public class SoundTrigger : MonoBehaviour {
       var clip = (AudioClip) soundDeck.Draw();
 
       if (clip == null) {
-        if (isOneShot) DisableSelf();
+        if (IsOneShot) DisableSelf();
       } else {
         // Replace the AudioSource component with the random clip and play
         source.clip = clip;
