@@ -392,6 +392,34 @@ Prefab:
       propertyPath: rolloffCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8259186, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 756ed79502e8e0940b0801bd5583f80f, type: 3}
+    - target: {fileID: 161578, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 188440, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 152100, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 138596, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 118746, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
   m_IsPrefabParent: 0
@@ -515,6 +543,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11474090, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
       propertyPath: useInvSqr
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250742, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
+      propertyPath: m_Volume
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250742, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250742, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -693,6 +733,95 @@ Prefab:
       value: 
       objectReference: {fileID: 24397872, guid: 62abc8af9f176294191f3cc11c3096c1,
         type: 2}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 68643be15a6a6cf4ca82cb8d69576fdf, type: 3}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2634563dacfb94b4485ef9e5c85f3726, type: 3}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b8dc312a2a02d534299d6bc910d0db69, type: 3}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e7c50f2595c17e4a83b9bd44213e05c, type: 3}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: c7150dc727347eb43bad79d53d6df71c, type: 3}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e750dacd0dbc8348bc59ca9e46d15fb, type: 3}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d177532d62a7554898e0901f7bbd1ae, type: 3}
+    - target: {fileID: 11442576, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: SoundBank.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ccb8501a55cb2a4395f762da70be699, type: 3}
+    - target: {fileID: 177324, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 126660, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 117402, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 185258, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 145144, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 115760, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 117402, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_Name
+      value: Clock
+      objectReference: {fileID: 0}
+    - target: {fileID: 419522, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.1822536
+      objectReference: {fileID: 0}
+    - target: {fileID: 419522, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.2792691
+      objectReference: {fileID: 0}
+    - target: {fileID: 419522, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 419522, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 419522, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -33.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286270, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5839a97d063e53749b5914f84b5af7b5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
   m_IsPrefabParent: 0
@@ -1384,6 +1513,11 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 157502, guid: de23f4168b88145088fddbb75b00f909, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de23f4168b88145088fddbb75b00f909, type: 2}
   m_IsPrefabParent: 0
