@@ -39,6 +39,10 @@ public class ShuffleDeck {
     return this;
   }
 
+  public ArrayList DrawAll() {
+    return Draw (_cards.Count);
+  }
+
   public ArrayList Draw(int count) {
     var hand = new ArrayList();
     if (count > _cards.Count) count = _cards.Count;
