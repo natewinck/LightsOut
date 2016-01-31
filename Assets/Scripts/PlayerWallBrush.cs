@@ -9,11 +9,17 @@ public class PlayerWallBrush : MonoBehaviour {
   private Vector3 m_LastPos;
   private bool m_IsMoving;
 
+  private bool m_RunningRaiseCoroutine = false;
+  private bool m_RunningLowerCoroutine = false;
+
+  private IEnumerator coroutine;
+
   void Awake()
   {
     // Get the child object's audio source, which is on the hand
     m_HandAudioSource = GetComponentInChildren<AudioSource>();
     m_LastPos = transform.position;
+    m_HandAudioSource.volume = 0.0f;
   }
 
   void Update()
@@ -67,11 +73,49 @@ public class PlayerWallBrush : MonoBehaviour {
       m_HandAudioSource.clip = clip;
       m_HandAudioSource.Play ();
 
+      StopAllCoroutines ();
+      StartCoroutine (RaiseVolume(0.5f));
+
+      Debug.Log ("Entered the collider");
+      /*
+      if (m_RunningRaiseCoroutine) {
+        // Do nothing
+      } else if (m_RunningLowerCoroutine) {
+        // Stop it, then raise it
+        StopCoroutine(coroutine);
+        coroutine = RaiseVolume (0.5f);
+        StartCoroutine (coroutine);
+      } else { // If nothing is running...
+        coroutine = RaiseVolume (0.5f);
+        StartCoroutine (coroutine);
+      }
+      */
+
+
+
       // Replace the clip in the first person controller for feet
       //GetComponent<UnityStandardAssets.Characters.FirstPerson.TankPersonController>().ChangeFootstepSounds(clips);
 
       // That's it
     }
+  }
+
+  IEnumerator RaiseVolume(float length) {
+    while (m_HandAudioSource.volume < 1.0f) {
+      m_RunningRaiseCoroutine = true;
+      yield return new WaitForSeconds (length / 20.0f);
+      m_HandAudioSource.volume += .05f;
+    }
+    m_RunningRaiseCoroutine = false;
+  }
+
+  IEnumerator LowerVolume(float length) {
+    while (m_HandAudioSource.volume > 0.0f) {
+      m_RunningLowerCoroutine = true;
+      yield return new WaitForSeconds (length / 20.0f);
+      m_HandAudioSource.volume -= .05f;
+    }
+    m_RunningLowerCoroutine = false;
   }
 
   void OnCollisionStay(Collision collision)
@@ -83,29 +127,71 @@ public class PlayerWallBrush : MonoBehaviour {
     //Debug.Log(velocity.magnitude);
     if (!m_IsMoving)
     {
-      if (m_HandAudioSource.isPlaying)
-      {
-        m_HandAudioSource.Stop ();
-      }
+      Debug.Log ("No longer moving but in it");
+      StopAllCoroutines ();
+      StartCoroutine(LowerVolume(0.2f));
+      /*
+      if (m_RunningLowerCoroutine) {
+        // Do nothing. Keep running that coroutine!
+      } else if (m_RunningRaiseCoroutine) {
+        // Stop that and lower it!
+        StopCoroutine (coroutine);
+        coroutine = LowerVolume (0.2f);
+        StartCoroutine (coroutine);
+        //m_HandAudioSource.Stop ();
+      } else { // Just in case the volume's all the way up, run lower
+        coroutine = LowerVolume (0.2f);
+        StartCoroutine (coroutine);
+      }*/
     }
     else if (m_IsMoving && collision.gameObject.CompareTag("Wall")) // if velocity is not zero
     {
-      Debug.Log ("hitting");
-      if (!m_HandAudioSource.isPlaying)
-      {
-        m_HandAudioSource.Play ();
+      //Debug.Log ("moving inside");
+      // Need to check to see if the coroutine is already running
+
+      StopAllCoroutines ();
+      StartCoroutine(RaiseVolume(0.1f));
+      /*
+      if (m_RunningRaiseCoroutine) {
+        // Do nothing
+        Debug.Log("doing nothing");
+      } else if (m_RunningLowerCoroutine) {
+        // Stop that coroutine and raise it
+        StopCoroutine (coroutine);
+        coroutine = RaiseVolume (0.1f);
+        StartCoroutine (coroutine);
+        //m_HandAudioSource.Play ()
+        Debug.Log("Stop and raise");
+      } else { // If no coroutine is running raise the volume just in case it was just lowered all the way
+        coroutine = RaiseVolume (0.1f);
+        StartCoroutine (coroutine);
+        Debug.Log ("Raising the volume");
       }
+      */
     }
   }
 
   void OnCollisionExit(Collision collision)
   {
-    //Debug.Log ("exiting");
+    //Debug.Log ("exiting " + collision.gameObject.name);
     // We're no longer in this collider so stop playing the sound
-    if (m_HandAudioSource.isPlaying && collision.gameObject.CompareTag("Wall"))
+    if (collision.gameObject.CompareTag("Wall"))
     {
       Debug.Log ("exiting");
-      m_HandAudioSource.Stop ();
+
+      StopAllCoroutines ();
+      StartCoroutine (LowerVolume (0.3f));
+      /*
+      if (m_RunningLowerCoroutine) {
+        // Do nothing
+      } else { // If nothing is running or it's being raised...
+        StopCoroutine (coroutine);
+        coroutine = LowerVolume (0.3f);
+        StartCoroutine (coroutine);
+        //m_HandAudioSource.Stop ();
+      }
+      */
+     
     }
   }
 }

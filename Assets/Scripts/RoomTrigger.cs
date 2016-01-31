@@ -8,12 +8,12 @@ public class RoomTrigger : MonoBehaviour {
     
     void OnTriggerEnter (Collider c)
     {
-        inside.TransitionTo(.25f);
+        inside.TransitionTo(1.5f);
 
     }
     void OnTriggerExit(Collider c)
     {
-        outside.TransitionTo(.25f);
+        outside.TransitionTo(2f);
 
     }
 }
