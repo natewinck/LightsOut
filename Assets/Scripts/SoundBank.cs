@@ -27,17 +27,19 @@ public class SoundBank : MonoBehaviour
   }
 
   public AudioClip Draw (string kind) {
-    return (AudioClip) _soundDecks[kind].Draw();
+    return Draw(kind, 1).First();
   }
 
   public List<AudioClip> Draw(string kind, int count)
   {
-    List<AudioClip> clips = _soundDecks[kind].Draw(count).Cast<AudioClip>().ToList();
+    if (!_soundDecks.ContainsKey(kind)) return new List<AudioClip>();
 
+    List<AudioClip> clips = _soundDecks[kind].Draw(count).Cast<AudioClip>().ToList();
     return clips;
   }
 
   public List<AudioClip> DrawAll (string kind) {
+    if (!_soundDecks.ContainsKey(kind)) return new List<AudioClip>();
     return _soundDecks[kind].DrawAll().Cast<AudioClip>().ToList();
   }
 
