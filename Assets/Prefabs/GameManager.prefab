@@ -54,7 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0e1a775af48764991ae30106a9662d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PenaltiesBeforeLoss: 3
+  playerAudioOnly: {fileID: 24512508, guid: 179d6c0e483541a499d2edc6813f3ef7, type: 2}
+  fullVolume: {fileID: 24513920, guid: 179d6c0e483541a499d2edc6813f3ef7, type: 2}
+  penaltiesBeforeLoss: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
