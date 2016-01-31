@@ -197,7 +197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &2028559189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26a3c1ecfd87254382730080f44db4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipList: []
+  clipList:
+  - {fileID: 8300000, guid: ae63011b706d5b04093b866ae6b0b0ec, type: 3}
   thenTransitionTo: nextlevel
 --- !u!82 &2028559190
 AudioSource:
