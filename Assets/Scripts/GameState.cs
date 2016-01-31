@@ -29,6 +29,7 @@ public class GameState {
   string currentState;
 
   private Dictionary<string, List<System.Action<string>>> handlers;
+  private bool isWaitingForTransition;
 
   public GameState() {
     handlers = new Dictionary<string, List<System.Action<string>>>();
@@ -62,9 +63,24 @@ public class GameState {
     return currentState;
   }
 
+  // Delay a state machine transition. Designed to transition when a clip
+  // finishes playing.
+  // NOTE: An immediate transition will cancel all pending delayed transitions.
+  //   And a delayed transition firing will cancel all other pending delayed
+  //   transitions.
   public IEnumerator DelayedTransitionTo(string newState, float delay) {
+    if (isWaitingForTransition) {
+      Debug.Log("*** WARNING! DelayedTransitionTo called, but another delayed transition is already queued! WEIRDNESS AHEAD");
+    }
+
+    isWaitingForTransition = true;
+
     yield return new WaitForSeconds(delay);
-    TransitionTo(newState);
+
+    // Still waiting? Transition.
+    if (isWaitingForTransition) {
+      TransitionTo(newState);
+    }
   }
 
   public void TransitionTo(string newState) {
@@ -76,6 +92,7 @@ public class GameState {
     List<System.Action<string>> someCallbacks;
 Debug.Log("STATE: " + transition);
     currentState = newState;
+    isWaitingForTransition = false;
 
     // Look up exit handlers & fire callbacks.
     someCallbacks = _getCallbacks(exitState);

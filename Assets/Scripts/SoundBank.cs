@@ -22,7 +22,7 @@ public class SoundBank : MonoBehaviour
 
   private Dictionary<string, ShuffleDeck> _soundDecks;
 
-  void Start () {
+  void Awake () {
     _soundDecks = new Dictionary<string, ShuffleDeck>();
     foreach (var namedClip in SoundList) {
       _soundDecks[namedClip.name] = new ShuffleDeck(namedClip.clipList);

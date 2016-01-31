@@ -12,7 +12,7 @@ public class SoundTrigger : MonoBehaviour {
   private AudioSource source;
 
   // Use this for initialization
-  void Start () {
+  void Awake () {
     soundDeck = new ShuffleDeck(SoundBank);
     source = GetComponent<AudioSource>();
   }

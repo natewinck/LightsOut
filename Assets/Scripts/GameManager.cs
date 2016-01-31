@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour {
 
   [FormerlySerializedAs("PenaltiesBeforeLoss")]
   public int penaltiesBeforeLoss = 3;
+  [System.NonSerialized]
+  public int penaltyCount;
 
   [System.NonSerialized]
   public GameState gameState;
-
-  private int penaltyCount;
 
   private static GameManager _instance;
   public static GameManager instance {
@@ -59,9 +59,9 @@ public class GameManager : MonoBehaviour {
   }
 
   void OnNextLevel(string oldState) {
-    Debug.Log("Next level!");
     var scene = SceneManager.GetActiveScene();
-    if (scene.buildIndex == SceneManager.sceneCount - 1) {
+    Debug.Log("Scene " + scene.buildIndex + " of " + SceneManager.sceneCount + " finished. Next level!");
+    if (scene.buildIndex == SceneManager.sceneCountInBuildSettings - 1) {
       // Play "all done" sound? Credits?
       Debug.Log("No more levels! Quitting!");
       Application.Quit();

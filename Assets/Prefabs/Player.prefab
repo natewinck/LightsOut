@@ -100,7 +100,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 452658}
   - 143: {fileID: 14398356}
-  - 114: {fileID: 11458726}
   - 54: {fileID: 5463956}
   - 82: {fileID: 8250742}
   - 114: {fileID: 11471578}
@@ -322,8 +321,8 @@ Camera:
   m_GameObject: {fileID: 146256}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.0047037248, g: 0.08579934, b: 0.21323532, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -338,7 +337,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -986,17 +985,42 @@ MonoBehaviour:
   SoundList:
   - name: wins
     clipList:
-    - {fileID: 8300000, guid: 67b258d145fbbec4b9814aa4ab1c7566, type: 3}
-    - {fileID: 8300000, guid: ef8c8f88cd1d02c42b5d52e89ae57777, type: 3}
+    - {fileID: 8300000, guid: 835af5d216f2945788c3f2f40f78bc6e, type: 3}
+    - {fileID: 8300000, guid: e438b2db88ffc4a35b02d2b850d608c8, type: 3}
   - name: losses
     clipList:
-    - {fileID: 8300000, guid: 748b67d0c2cf8de438fcffce1ce12aa0, type: 3}
-    - {fileID: 8300000, guid: ce6f09823ecfedd4eaae5f6cd95f012b, type: 3}
-    - {fileID: 8300000, guid: dd34a606eef71564d9741a5588da7fd5, type: 3}
-    - {fileID: 8300000, guid: 0be520dab5c05e14682ed0121051f714, type: 3}
-    - {fileID: 8300000, guid: 78b6e30d5a03a9043a402fa2f0a05fb3, type: 3}
-  - name: mutters
-    clipList: []
+    - {fileID: 8300000, guid: e5e89b637b5f5804db9042cfd1c8e9a1, type: 3}
+    - {fileID: 8300000, guid: 02d059aa3330d0b408c716dc11674a44, type: 3}
+    - {fileID: 8300000, guid: 2c4d46ba714bb454592d3091eeb257b1, type: 3}
+    - {fileID: 8300000, guid: bfe932ccb33ac6f4aa1aceef7ac7efef, type: 3}
+    - {fileID: 8300000, guid: 7ad04dfd5e677b148b3df507063e889a, type: 3}
+    - {fileID: 8300000, guid: 6d12f2fe211262f4896a3088376a7a98, type: 3}
+    - {fileID: 8300000, guid: cb0026ff0a916924b9bbbebcb15ca706, type: 3}
+    - {fileID: 8300000, guid: cdd0afb060a156745a419411eae27569, type: 3}
+    - {fileID: 8300000, guid: 47176e72f55887345a74d8a1a2a6c46a, type: 3}
+    - {fileID: 8300000, guid: 0300abb387a0a0943bab6012fc5d641f, type: 3}
+    - {fileID: 8300000, guid: 58ec28c4fef30294e9c93d887c030697, type: 3}
+    - {fileID: 8300000, guid: c8ddd408e79b992468ace45064c0db82, type: 3}
+    - {fileID: 8300000, guid: 5a20178a72c9b5f4597ff691c11a7939, type: 3}
+    - {fileID: 8300000, guid: 830abaca22c33b24f9c0538aceb0399a, type: 3}
+    - {fileID: 8300000, guid: 2190f57b80c45d24ab1ba6804d68f2a5, type: 3}
+    - {fileID: 8300000, guid: 3d22812c51c12264d8b0b3e6059b7f42, type: 3}
+    - {fileID: 8300000, guid: 731bee7e752a17b4d9448345379e60ec, type: 3}
+  - name: penalties1
+    clipList:
+    - {fileID: 8300000, guid: 4805a63028c6e204088262c26910907d, type: 3}
+    - {fileID: 8300000, guid: 0ac3c2121dfc9e446a58069619af4447, type: 3}
+    - {fileID: 8300000, guid: af9be4ca93af6cf42825043ed697b078, type: 3}
+    - {fileID: 8300000, guid: 7deab67b9daab8245b61226afc670589, type: 3}
+    - {fileID: 8300000, guid: 59ea3c7cf39c6e345a80f49bd038113f, type: 3}
+    - {fileID: 8300000, guid: 8d063ace088294547b96f62d2f8878a7, type: 3}
+  - name: penalties2
+    clipList:
+    - {fileID: 8300000, guid: b2de8c36946c52346ba3bd130c077410, type: 3}
+    - {fileID: 8300000, guid: 84d741f8241af634eb4d6479a4e8270a, type: 3}
+    - {fileID: 8300000, guid: 246953aa7e6f0bf49be86356ad8144dc, type: 3}
+    - {fileID: 8300000, guid: 02fc728d10c7ed44885b3727effa9b8b, type: 3}
+    - {fileID: 8300000, guid: a2b090aeccf6b5f4dac102bc1a52bf40, type: 3}
 --- !u!114 &11411914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1049,102 +1073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280fbc329e5284035932c33323405945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11458726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155546}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsWalking: 0
-  m_WalkSpeed: 2
-  m_RunSpeed: 3
-  m_RunstepLenghten: 0.7
-  m_AllowJump: 0
-  m_JumpSpeed: 0
-  m_StickToGroundForce: 10
-  m_GravityMultiplier: 2
-  m_MouseLook:
-    XSensitivity: 2
-    YSensitivity: 2
-    clampVerticalRotation: 1
-    MinimumX: -90
-    MaximumX: 90
-    smooth: 0
-    smoothTime: 5
-    lockCursor: 1
-  m_UseFovKick: 1
-  m_FovKick:
-    Camera: {fileID: 0}
-    originalFov: 0
-    FOVIncrease: 3
-    TimeToIncrease: 1
-    TimeToDecrease: 1
-    IncreaseCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_UseHeadBob: 1
-  m_HeadBob:
-    HorizontalBobRange: 0.1
-    VerticalBobRange: 0.1
-    Bobcurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 0.5
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1.5
-        value: -1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    VerticaltoHorizontalRatio: 2
-  m_JumpBob:
-    BobDuration: 0.2
-    BobAmount: 0.1
-  m_StepInterval: 2
-  m_FootstepSounds:
-  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
-  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
-  m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
-  m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
 --- !u!114 &11464550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1258,10 +1186,10 @@ MonoBehaviour:
     BobAmount: 0.1
   m_StepInterval: 6
   m_FootstepSounds:
-  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
-  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
-  m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
-  m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_JumpSound: {fileID: 0}
+  m_LandSound: {fileID: 0}
 --- !u!114 &11474090
 MonoBehaviour:
   m_ObjectHideFlags: 1
