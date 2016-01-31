@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3303378}
   - 65: {fileID: 6502886}
   - 23: {fileID: 2375354}
+  - 114: {fileID: 11419654}
   m_Layer: 8
   m_Name: West Wall
   m_TagString: Wall
@@ -47,8 +48,7 @@ GameObject:
   - 33: {fileID: 3301318}
   - 65: {fileID: 6511396}
   - 23: {fileID: 2323102}
-  - 114: {fileID: 11479334}
-  - 114: {fileID: 11479588}
+  - 114: {fileID: 11482374}
   m_Layer: 8
   m_Name: North Wall
   m_TagString: Wall
@@ -172,6 +172,7 @@ GameObject:
   - 33: {fileID: 3301338}
   - 65: {fileID: 6534986}
   - 23: {fileID: 2373794}
+  - 114: {fileID: 11490138}
   m_Layer: 8
   m_Name: East Wall
   m_TagString: Wall
@@ -208,6 +209,7 @@ GameObject:
   - 33: {fileID: 3306870}
   - 65: {fileID: 6561058}
   - 23: {fileID: 2322462}
+  - 114: {fileID: 11428150}
   m_Layer: 8
   m_Name: South Wall
   m_TagString: Wall
@@ -933,12 +935,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846a35dd5a4c8c54aa6f876a60bf1b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundClips:
-  - {fileID: 8300000, guid: 0909e765ac4ee70409f981cc45bd0bdc, type: 3}
-  - {fileID: 8300000, guid: 9d5cadfe04847af4e8948fdda23b1917, type: 3}
-  - {fileID: 8300000, guid: 1b91993671617d041b26e58ceec5a62f, type: 3}
-  - {fileID: 8300000, guid: d55d985eaa9d1844094c058790815663, type: 3}
-  - {fileID: 8300000, guid: cdfb22400166fa04bb6ec2becd80410e, type: 3}
+  SoundList:
+  - name: footsteps
+    clipList:
+    - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
+    - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+    - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+    - {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+--- !u!114 &11419654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846a35dd5a4c8c54aa6f876a60bf1b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundList:
+  - name: wallbrushes
+    clipList:
+    - {fileID: 8300000, guid: 15680332b37c84fc18526f646d83a20a, type: 3}
+    - {fileID: 8300000, guid: 1b968de9f18ec4aac88a5ae68b404656, type: 3}
+    - {fileID: 8300000, guid: ff2adaee0c82d488482dd992e5edc448, type: 3}
+  - name: wallbumps
+    clipList:
+    - {fileID: 8300000, guid: 14decee0084964a7bb934c3be5d0595e, type: 3}
+    - {fileID: 8300000, guid: a84592d12c664430e9dbe55013f693ce, type: 3}
+    - {fileID: 8300000, guid: 70b1bdf79e27c4ad882baf8ab89efec2, type: 3}
+    - {fileID: 8300000, guid: 6e5855f9991a34e69805326cf2ef8df6, type: 3}
+    - {fileID: 8300000, guid: 79a344da8be8c48ef8462583ee449845, type: 3}
+    - {fileID: 8300000, guid: da4cbadaec7f24f14b849da34441e6b4, type: 3}
+    - {fileID: 8300000, guid: c0d16c1d2477c485a85fb8537ef7a86b, type: 3}
+    - {fileID: 8300000, guid: a92b3b2ef881248d29787c2c08a875bb, type: 3}
+    - {fileID: 8300000, guid: acacef6f222a34b328d03e4da443c1e2, type: 3}
+--- !u!114 &11428150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846a35dd5a4c8c54aa6f876a60bf1b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundList:
+  - name: wallbrushes
+    clipList:
+    - {fileID: 8300000, guid: 15680332b37c84fc18526f646d83a20a, type: 3}
+    - {fileID: 8300000, guid: 1b968de9f18ec4aac88a5ae68b404656, type: 3}
+    - {fileID: 8300000, guid: ff2adaee0c82d488482dd992e5edc448, type: 3}
+  - name: wallbumps
+    clipList:
+    - {fileID: 8300000, guid: 14decee0084964a7bb934c3be5d0595e, type: 3}
+    - {fileID: 8300000, guid: a84592d12c664430e9dbe55013f693ce, type: 3}
+    - {fileID: 8300000, guid: 70b1bdf79e27c4ad882baf8ab89efec2, type: 3}
+    - {fileID: 8300000, guid: 6e5855f9991a34e69805326cf2ef8df6, type: 3}
+    - {fileID: 8300000, guid: 79a344da8be8c48ef8462583ee449845, type: 3}
+    - {fileID: 8300000, guid: da4cbadaec7f24f14b849da34441e6b4, type: 3}
+    - {fileID: 8300000, guid: c0d16c1d2477c485a85fb8537ef7a86b, type: 3}
+    - {fileID: 8300000, guid: a92b3b2ef881248d29787c2c08a875bb, type: 3}
+    - {fileID: 8300000, guid: acacef6f222a34b328d03e4da443c1e2, type: 3}
 --- !u!114 &11442014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -956,7 +1015,7 @@ MonoBehaviour:
   near: 1
   far: 10
   disableRfl: 0
---- !u!114 &11479334
+--- !u!114 &11482374
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -964,34 +1023,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 114824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Script: {fileID: 11500000, guid: 846a35dd5a4c8c54aa6f876a60bf1b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundClips:
-  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
-  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
-  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
---- !u!114 &11479588
+  SoundList:
+  - name: wallbrushes
+    clipList:
+    - {fileID: 8300000, guid: 15680332b37c84fc18526f646d83a20a, type: 3}
+    - {fileID: 8300000, guid: 1b968de9f18ec4aac88a5ae68b404656, type: 3}
+    - {fileID: 8300000, guid: ff2adaee0c82d488482dd992e5edc448, type: 3}
+  - name: wallbumps
+    clipList:
+    - {fileID: 8300000, guid: 14decee0084964a7bb934c3be5d0595e, type: 3}
+    - {fileID: 8300000, guid: a84592d12c664430e9dbe55013f693ce, type: 3}
+    - {fileID: 8300000, guid: 70b1bdf79e27c4ad882baf8ab89efec2, type: 3}
+    - {fileID: 8300000, guid: 6e5855f9991a34e69805326cf2ef8df6, type: 3}
+    - {fileID: 8300000, guid: 79a344da8be8c48ef8462583ee449845, type: 3}
+    - {fileID: 8300000, guid: da4cbadaec7f24f14b849da34441e6b4, type: 3}
+    - {fileID: 8300000, guid: c0d16c1d2477c485a85fb8537ef7a86b, type: 3}
+    - {fileID: 8300000, guid: a92b3b2ef881248d29787c2c08a875bb, type: 3}
+    - {fileID: 8300000, guid: acacef6f222a34b328d03e4da443c1e2, type: 3}
+--- !u!114 &11490138
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114824}
+  m_GameObject: {fileID: 158870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 846a35dd5a4c8c54aa6f876a60bf1b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundClips:
-  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
-  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
-  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
-  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
-  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
-  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
-  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
-  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
-  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+  SoundList:
+  - name: wallbrushes
+    clipList:
+    - {fileID: 8300000, guid: 15680332b37c84fc18526f646d83a20a, type: 3}
+    - {fileID: 8300000, guid: 1b968de9f18ec4aac88a5ae68b404656, type: 3}
+    - {fileID: 8300000, guid: ff2adaee0c82d488482dd992e5edc448, type: 3}
+  - name: wallbumps
+    clipList:
+    - {fileID: 8300000, guid: 14decee0084964a7bb934c3be5d0595e, type: 3}
+    - {fileID: 8300000, guid: a84592d12c664430e9dbe55013f693ce, type: 3}
+    - {fileID: 8300000, guid: 70b1bdf79e27c4ad882baf8ab89efec2, type: 3}
+    - {fileID: 8300000, guid: 6e5855f9991a34e69805326cf2ef8df6, type: 3}
+    - {fileID: 8300000, guid: 79a344da8be8c48ef8462583ee449845, type: 3}
+    - {fileID: 8300000, guid: da4cbadaec7f24f14b849da34441e6b4, type: 3}
+    - {fileID: 8300000, guid: c0d16c1d2477c485a85fb8537ef7a86b, type: 3}
+    - {fileID: 8300000, guid: a92b3b2ef881248d29787c2c08a875bb, type: 3}
+    - {fileID: 8300000, guid: acacef6f222a34b328d03e4da443c1e2, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
