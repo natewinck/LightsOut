@@ -938,10 +938,10 @@ MonoBehaviour:
   SoundList:
   - name: footsteps
     clipList:
-    - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
-    - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
-    - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
-    - {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+    - {fileID: 8300000, guid: 6914d78be962c455f9dc2eaa20e35f84, type: 3}
+    - {fileID: 8300000, guid: ef2f5f007344045a8a30f80dab6c036e, type: 3}
+    - {fileID: 8300000, guid: 6292f78a7dc554b2a88e8ea7c604db98, type: 3}
+    - {fileID: 8300000, guid: 8fdf070beb8f742bc8e72c6dd10c1e52, type: 3}
 --- !u!114 &11419654
 MonoBehaviour:
   m_ObjectHideFlags: 1

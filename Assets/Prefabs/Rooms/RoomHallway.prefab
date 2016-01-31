@@ -244,6 +244,7 @@ GameObject:
   - 33: {fileID: 3350888}
   - 64: {fileID: 6429488}
   - 23: {fileID: 2378158}
+  - 114: {fileID: 11421012}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Floor
@@ -1226,6 +1227,24 @@ MonoBehaviour:
     - {fileID: 8300000, guid: c0d16c1d2477c485a85fb8537ef7a86b, type: 3}
     - {fileID: 8300000, guid: a92b3b2ef881248d29787c2c08a875bb, type: 3}
     - {fileID: 8300000, guid: acacef6f222a34b328d03e4da443c1e2, type: 3}
+--- !u!114 &11421012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846a35dd5a4c8c54aa6f876a60bf1b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundList:
+  - name: footsteps
+    clipList:
+    - {fileID: 8300000, guid: af93afa0b5780489487f66917a1983d1, type: 3}
+    - {fileID: 8300000, guid: 6215eb4169fbb4cb8b21007266ec2f5a, type: 3}
+    - {fileID: 8300000, guid: 62238c57c8b4441a283697fdfa744fb3, type: 3}
+    - {fileID: 8300000, guid: d414086b80c484174bbe67b3f108b048, type: 3}
 --- !u!114 &11430556
 MonoBehaviour:
   m_ObjectHideFlags: 1
