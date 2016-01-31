@@ -45,7 +45,7 @@ AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: actions
+  m_Name: constant
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: bc06ef20e635642c288bfd47dce64590
   m_Children: []
@@ -91,7 +91,8 @@ AudioMixerSnapshotController:
   m_Name: Kitchen Outside
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: f887cc4acc7d2e448840ee2f647fe433
-  m_FloatValues: {}
+  m_FloatValues:
+    1ca18fc3ce7ed477fa8f5f1c59184e55: -68.0845
   m_TransitionOverrides: {}
 --- !u!245 &24503394
 AudioMixerSnapshotController:
@@ -101,5 +102,6 @@ AudioMixerSnapshotController:
   m_Name: Kitchen Inside
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 888274a5bb1108440a1d1287a6363259
-  m_FloatValues: {}
+  m_FloatValues:
+    1ca18fc3ce7ed477fa8f5f1c59184e55: -0.16685188
   m_TransitionOverrides: {}
