@@ -50,6 +50,7 @@ public class PlayerMutter : MonoBehaviour {
   }
 
   void OnTriggerEnter(Collider other) {
+    Debug.Log (other.name);
     if (other.CompareTag("MutterBox") && other.GetComponent<SoundBank>() != null && !m_MouthAudioSource.isPlaying) {
       Debug.Log ("I'm collisioning with Mutter Box");
       // So we don't keep changing the audio clips when we're on the same floor,
