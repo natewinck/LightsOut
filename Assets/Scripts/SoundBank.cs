@@ -9,6 +9,7 @@ public class SoundBank : MonoBehaviour
   public static readonly string WALLBUMPS = "wallbumps";
   public static readonly string FOOTSTEPS = "footsteps";
   public static readonly string MUTTERS = "mutters";
+  public static readonly string INTROS = "intros";
 
   [System.Serializable]
   public class NamedClips {
