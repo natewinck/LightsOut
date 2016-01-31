@@ -1,7 +1,30 @@
-AC_freesound_edited - https://freesound.org/people/ceberation/sounds/235509/ - http://creativecommons.org/licenses/by/3.0/
+Thanks for playing!
 
-Fridge - http://www.freesound.org/people/jakobhandersen/sounds/133827/ - http://creativecommons.org/publicdomain/zero/1.0/
 
-crickets - http://www.freesound.org/people/rhapsodize/sounds/171823/ - http://creativecommons.org/licenses/by/3.0/
+Midnight Munchies was developed for Global Game Jam 2016 at the Run Jump Dev location in Lexington, KY.  It utilizes the Marco Polo diversifier, providing the user with no graphical information.  
+Rather, the user is expected to navigate using nothing but sound cues.
 
-bed creak - http://www.freesound.org/people/krb21/sounds/118605/ - http://creativecommons.org/publicdomain/zero/1.0/
+
+Concept - Rebecca Vaughn
+
+Level Design - mildmojo, Nathaniel Winckler, Gawain Taylor, Michael Vaughn
+
+Programming - mildmojo, Nathaniel Winckler
+
+Sound Design - Rebecca Vaughn, Michael Vaughn
+
+Voice of Child - Rebecca Vaughn
+
+Voice for Credits - mildmojo
+
+Music - Red Medley
+
+
+
+Air Conditioner ambience_01.wav - https://freesound.org/people/ceberation/sounds/235509/ - http://creativecommons.org/licenses/by/3.0/legalcode
+
+crickets_creek.wav - http://www.freesound.org/people/rhapsodize/sounds/171823/ - http://creativecommons.org/licenses/by/3.0/legalcode
+
+
+
+ 
