@@ -267,6 +267,10 @@ Prefab:
       propertyPath: m_TagString
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 11414086, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
   m_IsPrefabParent: 0
@@ -420,6 +424,14 @@ Prefab:
       propertyPath: SoundList.Array.data[1].clipList.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: 78b6e30d5a03a9043a402fa2f0a05fb3, type: 3}
+    - target: {fileID: 11471578, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
+      propertyPath: m_MouseLookEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471578, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
+      propertyPath: m_TurnSpeed
+      value: 110
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
   m_IsPrefabParent: 0
@@ -474,6 +486,30 @@ Prefab:
       propertyPath: PenaltiesBeforeLoss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11470368, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
+      propertyPath: environmentMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 179d6c0e483541a499d2edc6813f3ef7,
+        type: 2}
+    - target: {fileID: 11470368, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
+      propertyPath: penaltiesBeforeLoss
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470368, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
+      propertyPath: playerMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 28971ac92284348b79e432abd448278f,
+        type: 2}
+    - target: {fileID: 11470368, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
+      propertyPath: playerAudioOnly
+      value: 
+      objectReference: {fileID: 24512508, guid: 179d6c0e483541a499d2edc6813f3ef7,
+        type: 2}
+    - target: {fileID: 11470368, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
+      propertyPath: fullVolume
+      value: 
+      objectReference: {fileID: 24513920, guid: 179d6c0e483541a499d2edc6813f3ef7,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
   m_IsPrefabParent: 0

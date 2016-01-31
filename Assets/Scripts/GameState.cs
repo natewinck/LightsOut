@@ -9,7 +9,18 @@ using System.Linq;
 // gameState.OnTransition("start", "play", (newState) => { Debug.Log("start => play"); });
 // gameState.on("gameover", OnGameOver);
 // void OnGameOver(newState) { Debug.Log("Game over man!"); }
-class GameState {
+/* States:
+- init (default)
+- intro
+- playing
+- win
+- lose
+- replaylevel
+- nextlevel
+- quit
+*/
+
+public class GameState {
   private static GameState _instance;
   public static GameState instance {
     get { return _instance == null ? _instance = new GameState() : _instance; }
@@ -42,8 +53,13 @@ class GameState {
     handlers.TryGetValue(stateOrTransition, out currentHandlers);
 
     // Add new handler.
+    if (currentHandlers == null) currentHandlers = new List<System.Action<string>>();
     currentHandlers.Add(handler);
     handlers[stateOrTransition] = currentHandlers;
+  }
+
+  public string GetState() {
+    return currentState;
   }
 
   public IEnumerator DelayedTransitionTo(string newState, float delay) {
@@ -58,20 +74,29 @@ class GameState {
     var exitState = "exit-" + currentState;
     var transitions = new string[] {enterState, transition, exitState};
     List<System.Action<string>> someCallbacks;
-
+Debug.Log("STATE: " + transition);
     currentState = newState;
 
     // Look up exit handlers & fire callbacks.
-    handlers.TryGetValue(exitState, out someCallbacks);
+    someCallbacks = _getCallbacks(exitState);
     foreach (var callback in someCallbacks) { callback(newState); }
 
     // Look up transition handlers & fire callbacks.
-    handlers.TryGetValue(transition, out someCallbacks);
+    someCallbacks = _getCallbacks(transition);
     foreach (var callback in someCallbacks) { callback(newState); }
 
     // Look up enter handlers & fire callbacks.
-    handlers.TryGetValue(enterState, out someCallbacks);
+    someCallbacks = _getCallbacks(enterState);
     foreach (var callback in someCallbacks) { callback(oldState); }
 
+  }
+
+  private List<System.Action<string>> _getCallbacks(string state) {
+    List<System.Action<string>> someCallbacks;
+
+    handlers.TryGetValue(state, out someCallbacks);
+    if (someCallbacks == null) someCallbacks = new List<System.Action<string>>();
+
+    return someCallbacks;
   }
 }

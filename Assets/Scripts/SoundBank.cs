@@ -30,7 +30,8 @@ public class SoundBank : MonoBehaviour
   }
 
   public AudioClip Draw (string kind) {
-    return Draw(kind, 1).First();
+    var clips = Draw(kind, 1);
+    return clips.Count > 0 ? clips.First() : null;
   }
 
   public List<AudioClip> Draw(string kind, int count)

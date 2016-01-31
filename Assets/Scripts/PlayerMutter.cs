@@ -38,7 +38,6 @@ public class PlayerMutter : MonoBehaviour {
   public AudioSource m_AudioSource;
 
   private GameState m_StateMachine;
-  private GameObject m_GameManager;
   private SoundBank m_SoundBank;
   private GameObject m_CurrentWall;
   private Vector3 m_LastPos;
@@ -47,17 +46,16 @@ public class PlayerMutter : MonoBehaviour {
   void Awake()
   {
     m_LastPos = transform.position;
-    m_StateMachine = GameState.instance;
     m_SoundBank = GetComponent<SoundBank>();
 
+  }
+
+  void Start() {
+    m_StateMachine = GameManager.instance.gameState;
     m_StateMachine.On("win", OnWin);
     m_StateMachine.On("lose", OnLose);
     m_StateMachine.On("intro", OnIntro);
     m_StateMachine.TransitionTo("intro");
-  }
-
-  void Start() {
-    m_GameManager = GameObject.Find("GameManager");
   }
 
   void Update()
