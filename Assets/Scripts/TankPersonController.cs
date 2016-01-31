@@ -46,6 +46,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private bool m_pushForward = false;
+
         // Use this for initialization
         private void Start()
         {
@@ -138,6 +140,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
+    // For touch based
+    public void PushForward() {
+      m_pushForward = true;
+    }
+
+    public void StopPushForward() {
+      m_pushForward = false;
+    }
+
+
         private void PlayJumpSound()
         {
             m_AudioSource.clip = m_JumpSound;
@@ -211,6 +223,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
+      if (m_pushForward) {
+        vertical = 1.0f;
+      }
+
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
@@ -236,6 +252,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
             }
         }
+
 
 
         private void RotateView()

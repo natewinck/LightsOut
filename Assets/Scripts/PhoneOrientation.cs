@@ -17,13 +17,13 @@ public class PhoneOrientation : MonoBehaviour {
     initialRotation = transform.rotation; 
     gyroInitialRotation = Input.gyro.attitude;
 
-    Debug.Log ("INITIAL: " + Input.gyro.attitude.eulerAngles.ToString());
+    //Debug.Log ("INITIAL: " + Input.gyro.attitude.eulerAngles.ToString());
 
 	}
 
   public void ResetOrientation() {
     gyroInitialRotation = Input.gyro.attitude; 
-    Debug.Log ("reset");
+    //Debug.Log ("reset");
   }
 	
 	// Update is called once per frame
