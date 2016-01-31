@@ -38,6 +38,7 @@ public class PlayerMutter : MonoBehaviour {
   public AudioSource m_AudioSource;
 
   private GameState m_StateMachine;
+  private GameObject m_GameManager;
   private SoundBank m_SoundBank;
   private GameObject m_CurrentWall;
   private Vector3 m_LastPos;
@@ -53,6 +54,10 @@ public class PlayerMutter : MonoBehaviour {
     m_StateMachine.On("lose", OnLose);
     m_StateMachine.On("intro", OnIntro);
     m_StateMachine.TransitionTo("intro");
+  }
+
+  void Start() {
+    m_GameManager = GameObject.Find("GameManager");
   }
 
   void Update()
@@ -124,7 +129,7 @@ public class PlayerMutter : MonoBehaviour {
 
   void OnIntro(string oldState) {
     // Get a mutter if exists.
-    var introBucket = GameObject.Find("IntroBucket");
+    var introBucket = GameObject.Find("GameManager");
     if (introBucket == null) return;
     var clip = introBucket.GetComponent<SoundBank>().Draw(SoundBank.INTROS);
 
