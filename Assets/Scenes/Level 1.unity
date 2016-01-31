@@ -1621,6 +1621,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1339066128}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1471801032 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 177324, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+  m_PrefabInternal: {fileID: 415780222}
+--- !u!114 &1471801033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1471801032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846a35dd5a4c8c54aa6f876a60bf1b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundList:
+  - name: mutters
+    clipList:
+    - {fileID: 8300000, guid: 52707780269ab45aaa31c0a591d0937b, type: 3}
+    - {fileID: 8300000, guid: cfc24f58e37d04ffda5bf637347623e7, type: 3}
+    - {fileID: 8300000, guid: be523ea9c651e43dda126bfcde1f0b11, type: 3}
 --- !u!1 &1483925456
 GameObject:
   m_ObjectHideFlags: 0
