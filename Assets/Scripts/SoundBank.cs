@@ -5,31 +5,39 @@ using System.Linq;
 
 public class SoundBank : MonoBehaviour
 {
-  public List<AudioClip> SoundClips;
-  //public string name;
-  // Instead of using name, I'm cheating and making brushing sounds first
-  // and bumping sounds second, always.
+  public static readonly string WALLBRUSHES = "wallbrushes";
+  public static readonly string WALLBUMPS = "wallbumps";
+  public static readonly string FOOTSTEPS = "footsteps";
 
-  private ShuffleDeck m_SoundDeck;
+  [System.Serializable]
+  public class NamedClips {
+    public string name;
+    public List<AudioClip> clipList;
+  }
+  public List<NamedClips> SoundList;
 
-  // Use this for initialization
+  private Dictionary<string, ShuffleDeck> _soundDecks;
+
   void Start () {
-    m_SoundDeck = new ShuffleDeck(SoundClips);
+    _soundDecks = new Dictionary<string, ShuffleDeck>();
+    foreach (var namedClip in SoundList) {
+      _soundDecks[namedClip.name] = new ShuffleDeck(namedClip.clipList);
+    }
   }
 
-	public AudioClip Draw () {
-		return (AudioClip) m_SoundDeck.Draw();
-	}
+  public AudioClip Draw (string kind) {
+    return (AudioClip) _soundDecks[kind].Draw();
+  }
 
-  public List<AudioClip> Draw(int count)
+  public List<AudioClip> Draw(string kind, int count)
   {
-    List<AudioClip> clips = m_SoundDeck.Draw (count).Cast<AudioClip>().ToList();
+    List<AudioClip> clips = _soundDecks[kind].Draw(count).Cast<AudioClip>().ToList();
 
     return clips;
   }
 
-  public List<AudioClip> DrawAll () {
-    return (List<AudioClip>) m_SoundDeck.DrawAll().Cast<AudioClip>().ToList();
+  public List<AudioClip> DrawAll (string kind) {
+    return _soundDecks[kind].DrawAll().Cast<AudioClip>().ToList();
   }
 
   // Update is called once per frame

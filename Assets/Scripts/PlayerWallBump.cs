@@ -48,7 +48,7 @@ public class PlayerWallBump : MonoBehaviour {
 
   void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.CompareTag ("Wall") && collision.gameObject.GetComponent<WallBumpSoundBank>() != null) {
+    if (collision.gameObject.CompareTag ("Wall") && collision.gameObject.GetComponent<SoundBank>() != null) {
       Debug.Log ("You hit the wall with force " + m_Velocity);
 
 
@@ -57,11 +57,11 @@ public class PlayerWallBump : MonoBehaviour {
       m_CurrentWall = collision.gameObject;
 
       // Get the audio source from the wall
-      AudioClip clip = m_CurrentWall.GetComponent<WallBumpSoundBank> ().Draw(); // All walls MUST have 2 sound banks
+      AudioClip clip = m_CurrentWall.GetComponent<SoundBank> ().Draw(SoundBank.WALLBUMPS); // All walls MUST have 2 sound banks
 
       foreach (ContactPoint contact in collision.contacts) {
         Debug.DrawRay (contact.point, contact.normal, Color.white, 2.0f);
-        
+
         // Was it behind or in front?
         if (Vector3.Dot (-contact.normal, transform.forward) >= 0.0f) {
           // In front

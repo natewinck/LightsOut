@@ -17,7 +17,7 @@ public class PlayerFootsteps : MonoBehaviour {
 
       // Get the audio source from the floor
       List<AudioClip> clips;
-      clips = hit.gameObject.GetComponent<SoundBank> ().DrawAll();
+      clips = hit.gameObject.GetComponent<SoundBank> ().DrawAll(SoundBank.FOOTSTEPS);
 
       // Replace the clip in the first person controller for feet
       GetComponent<UnityStandardAssets.Characters.FirstPerson.TankPersonController>().ChangeFootstepSounds(clips);

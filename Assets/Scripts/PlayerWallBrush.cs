@@ -61,7 +61,7 @@ public class PlayerWallBrush : MonoBehaviour {
       m_CurrentWall = collision.gameObject;
 
       // Get the audio source from the wall
-      AudioClip clip = m_CurrentWall.GetComponent<WallBrushSoundBank> ().Draw();
+      AudioClip clip = m_CurrentWall.GetComponent<SoundBank> ().Draw(SoundBank.WALLBRUSHES);
 
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
       m_HandAudioSource.clip = clip;
