@@ -3,7 +3,7 @@
 --- !u!29 &1
 SceneSettings:
   m_ObjectHideFlags: 0
-  m_PVSData:
+  m_PVSData: 
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
@@ -188,7 +188,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c24586dca5d1e204fa6580176ee27f70, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -320,7 +320,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c24586dca5d1e204fa6580176ee27f70, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -356,6 +356,126 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 94430265}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &107615648 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 130480, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+  m_PrefabInternal: {fileID: 997974731}
+--- !u!114 &107615649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107615648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &107615650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107615648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
+--- !u!1 &208795883 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109018, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+  m_PrefabInternal: {fileID: 997974731}
+--- !u!114 &208795884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208795883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &208795885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208795883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
+--- !u!1 &350476030 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 194952, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+  m_PrefabInternal: {fileID: 61632163}
+--- !u!114 &350476031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350476030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &350476032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350476030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
 --- !u!1 &390337930
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +506,86 @@ Transform:
   - {fileID: 21778882}
   m_Father: {fileID: 1716426513}
   m_RootOrder: 3
+--- !u!1 &390978703 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 111160, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+  m_PrefabInternal: {fileID: 997974731}
+--- !u!114 &390978704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390978703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &390978705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390978703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
+--- !u!1 &423937980 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192196, guid: de23f4168b88145088fddbb75b00f909, type: 2}
+  m_PrefabInternal: {fileID: 1177667432}
+--- !u!114 &423937981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423937980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &423937982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423937980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
 --- !u!1 &609575236
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +628,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c0ac32afffdce8046a6c05f83f7e272d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -506,7 +706,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c24586dca5d1e204fa6580176ee27f70, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -542,6 +742,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 767695158}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &810471440 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 129684, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+  m_PrefabInternal: {fileID: 61632163}
+--- !u!114 &810471441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810471440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &810471442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810471440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
 --- !u!1 &813594023
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,8 +812,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   enableSpatialization: 1
   gain: 0
   useInvSqr: 0
@@ -666,7 +906,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c24586dca5d1e204fa6580176ee27f70, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -723,8 +963,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fb5467595d89f646b3c6866dc313596, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   SoundBank:
   - {fileID: 8300000, guid: 494bd1721199a40c5a79fa3011793556, type: 3}
 --- !u!4 &822814152 stripped
@@ -773,8 +1013,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   enableSpatialization: 1
   gain: 24
   useInvSqr: 1
@@ -868,7 +1108,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1040,8 +1280,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f8f273299705e147a02e8f1cb0401cf, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   inside: {fileID: 24524258, guid: 12c5f1112577dfd45af003fbfcbffe30, type: 2}
   outside: {fileID: 24500003, guid: 12c5f1112577dfd45af003fbfcbffe30, type: 2}
 --- !u!23 &1019154511
@@ -1055,7 +1295,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: fa4b75dbb4602814dabf3f13699c607d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1143,7 +1383,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: fa4b75dbb4602814dabf3f13699c607d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1179,6 +1419,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1054946961}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1129910206 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 186802, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+  m_PrefabInternal: {fileID: 61632163}
+--- !u!114 &1129910207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129910206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &1129910208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129910206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
 --- !u!1001 &1177667432
 Prefab:
   m_ObjectHideFlags: 0
@@ -1267,7 +1547,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c0ac32afffdce8046a6c05f83f7e272d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1345,7 +1625,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c0ac32afffdce8046a6c05f83f7e272d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1423,8 +1703,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   enableSpatialization: 1
   gain: 24
   useInvSqr: 1
@@ -1518,7 +1798,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1554,6 +1834,86 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1339066128}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1368708618 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 149514, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+  m_PrefabInternal: {fileID: 997974731}
+--- !u!114 &1368708619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1368708618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &1368708620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1368708618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
+--- !u!1 &1443804686 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 158870, guid: de23f4168b88145088fddbb75b00f909, type: 2}
+  m_PrefabInternal: {fileID: 1177667432}
+--- !u!114 &1443804687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443804686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &1443804688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443804686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
 --- !u!1 &1483925456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,8 +1972,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f8f273299705e147a02e8f1cb0401cf, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   inside: {fileID: 24552416, guid: 62abc8af9f176294191f3cc11c3096c1, type: 2}
   outside: {fileID: 24500003, guid: 62abc8af9f176294191f3cc11c3096c1, type: 2}
 --- !u!23 &1496578299
@@ -1627,7 +1987,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: fa4b75dbb4602814dabf3f13699c607d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1673,6 +2033,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &1518902064 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 105166, guid: de23f4168b88145088fddbb75b00f909, type: 2}
+  m_PrefabInternal: {fileID: 1177667432}
+--- !u!114 &1518902065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1518902064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &1518902066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1518902064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
 --- !u!1 &1556001453 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 155546, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
@@ -1686,8 +2086,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aca53c79b9a6d48738e11469bd36b08a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &1556001461
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1774,6 +2174,86 @@ Transform:
   - {fileID: 390337931}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1907996641 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 104542, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+  m_PrefabInternal: {fileID: 997974731}
+--- !u!114 &1907996642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907996641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &1907996643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907996641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
+--- !u!1 &1921826717 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 138658, guid: 2f73d841216524b9b8d99cbddcc70534, type: 2}
+  m_PrefabInternal: {fileID: 997974731}
+--- !u!114 &1921826718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921826717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &1921826719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921826717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
 --- !u!1 &1959877087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +2296,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c0ac32afffdce8046a6c05f83f7e272d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1894,7 +2374,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c0ac32afffdce8046a6c05f83f7e272d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -1958,8 +2438,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f8f273299705e147a02e8f1cb0401cf, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   inside: {fileID: 24503394, guid: ad642888b6fd60249a9b2f6cf8b11c5b, type: 2}
   outside: {fileID: 24500003, guid: ad642888b6fd60249a9b2f6cf8b11c5b, type: 2}
 --- !u!23 &2049524472
@@ -1973,7 +2453,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: fa4b75dbb4602814dabf3f13699c607d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -2061,7 +2541,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: c0ac32afffdce8046a6c05f83f7e272d, type: 2}
-  m_SubsetIndices:
+  m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
@@ -2097,3 +2577,43 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2089758819}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2146531624 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 188440, guid: 5458277d34c0748c6ba05cd6982af594, type: 2}
+  m_PrefabInternal: {fileID: 61632163}
+--- !u!114 &2146531625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146531624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca77950b5944b4aab8f75f6f51da5c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 441f42ede0dacb9479ddf373369b61af, type: 3}
+  - {fileID: 8300000, guid: b7f61e1b67d856542a0205844e6c6a3b, type: 3}
+  - {fileID: 8300000, guid: badf65bfabd42f944a9f66dba61d9ab3, type: 3}
+  - {fileID: 8300000, guid: b91ec90102a3d6a4b86b85eef1ebb541, type: 3}
+  - {fileID: 8300000, guid: 1c45180fb565a8c46bc789d643fbd31a, type: 3}
+  - {fileID: 8300000, guid: 9e323c347cd205c469d81f9adcc65475, type: 3}
+  - {fileID: 8300000, guid: 3419e52bfdec0e44f9ce042852aded1a, type: 3}
+  - {fileID: 8300000, guid: 2ba438cdbf3226340a6d8612b5857b18, type: 3}
+  - {fileID: 8300000, guid: 54fd3bc8765cef74a95db0a89de2c2db, type: 3}
+--- !u!114 &2146531626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146531624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a42108808dd475087dcdaec6eb3447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClips:
+  - {fileID: 8300000, guid: 1a9f382c58a93664a89693833eb95468, type: 3}
+  - {fileID: 8300000, guid: d4a92ecc558c74e4e82d116ab966c560, type: 3}
+  - {fileID: 8300000, guid: 25429aad77ebc2442bb4ff27406ec107, type: 3}
