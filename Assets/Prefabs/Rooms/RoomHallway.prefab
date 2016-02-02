@@ -136,6 +136,7 @@ GameObject:
   - 23: {fileID: 2367634}
   - 82: {fileID: 8286270}
   - 114: {fileID: 11472446}
+  - 169: {fileID: 16916062}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -1363,7 +1364,8 @@ AudioSource:
   m_GameObject: {fileID: 104828}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24302092, guid: 62abc8af9f176294191f3cc11c3096c1,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1374,33 +1376,48 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - time: 0.19791667
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -10.0039835
+      outSlope: -10.0039835
+      tangentMode: 0
+    - time: 0.30416667
+      value: 0.49387187
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+    - time: 0.5083333
+      value: 0.23467967
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+    - time: 0.8
+      value: 0.125
+      inSlope: -0.15631224
+      outSlope: -0.15631224
       tangentMode: 0
     - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.1
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0.892
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1591,7 +1608,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 5839a97d063e53749b5914f84b5af7b5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.37
+  m_Volume: 0.17
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1599,9 +1616,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 4.1
   MinDistance: 1.27
-  MaxDistance: 17.67226
+  MaxDistance: 82
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1609,23 +1626,28 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 1.005014
       inSlope: 0
-      outSlope: 0
+      outSlope: -1.0963156
+      tangentMode: 0
+    - time: 0.5659477
+      value: 0.11589739
+      inSlope: -0.8512763
+      outSlope: -0.8512763
       tangentMode: 0
     - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.006128123
+      inSlope: -0.12789154
+      outSlope: -0.12789154
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.99
+      value: 0.964
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1636,7 +1658,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.055555556
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1950,7 +1972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableSpatialization: 1
   gain: 0
-  useInvSqr: 1
+  useInvSqr: 0
   near: 1
   far: 10
   disableRfl: 0
@@ -2164,9 +2186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableSpatialization: 1
-  gain: 24
-  useInvSqr: 1
+  enableSpatialization: 0
+  gain: 1
+  useInvSqr: 0
   near: 1
   far: 10
   disableRfl: 0
@@ -2252,6 +2274,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f10dd7db1b20fc42830b15619dfb015, type: 3}
   - {fileID: 8300000, guid: 9a1eda5e22cd9b34a878138bb6ced774, type: 3}
   - {fileID: 8300000, guid: 1376aa1fae05b433f85811fe03520b0e, type: 3}
+--- !u!169 &16916062
+AudioLowPassFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117402}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.8636364
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
