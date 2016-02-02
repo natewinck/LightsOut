@@ -99,12 +99,13 @@ public class PlayerMutter : MonoBehaviour {
     Debug.Log (other.name);
     var otherSoundBank = other.GetComponent<SoundBank>();
 
+    CheckPenalty(otherSoundBank, other);
+
     if (otherSoundBank != null && !m_AudioSource.isPlaying) {
       PlayMutter(otherSoundBank, other);
     }
 
     CheckWin(other);
-    CheckPenalty(otherSoundBank, other);
   }
 
   void AfterPenalty(string newState) {
@@ -128,7 +129,8 @@ public class PlayerMutter : MonoBehaviour {
     m_AudioSource.PlayDelayed(0.8f);
 
     if (m_StateMachine.GetState() == "penalty") {
-      m_StateMachine.DelayedTransitionTo("playing", clip.length + 0.8f);
+      Debug.Log("delaying penalty to playing");
+      StartCoroutine(m_StateMachine.DelayedTransitionTo("playing", clip.length + 0.8f));
     }
   }
 
