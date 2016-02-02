@@ -54,6 +54,7 @@ public class PlayerMutter : MonoBehaviour {
     m_GameManager = GameManager.instance;
     m_StateMachine = m_GameManager.gameState;
     m_StateMachine.OnTransition("playing", "win", OnWin);
+    m_StateMachine.OnTransition("penalty", "win", OnWin);
     m_StateMachine.On("lose", OnLose);
     m_StateMachine.On("intro", OnIntro);
     m_StateMachine.OnTransition("penalty", "playing", AfterPenalty);
@@ -99,12 +100,13 @@ public class PlayerMutter : MonoBehaviour {
     Debug.Log (other.name);
     var otherSoundBank = other.GetComponent<SoundBank>();
 
+    CheckPenalty(otherSoundBank, other);
+
     if (otherSoundBank != null && !m_AudioSource.isPlaying) {
       PlayMutter(otherSoundBank, other);
     }
 
     CheckWin(other);
-    CheckPenalty(otherSoundBank, other);
   }
 
   void AfterPenalty(string newState) {
@@ -114,7 +116,7 @@ public class PlayerMutter : MonoBehaviour {
     var clip = m_SoundBank.Draw("penalties" + penaltyCount);
     if (clip != null) {
       m_AudioSource.clip = clip;
-      m_AudioSource.PlayDelayed(0.5f);
+      m_AudioSource.PlayDelayed(0.25f);
     }
   }
 
@@ -125,10 +127,11 @@ public class PlayerMutter : MonoBehaviour {
 
     // Get the child of this (which should be the hand) and add this audio clip to it, then play
     m_AudioSource.clip = clip;
-    m_AudioSource.PlayDelayed(0.8f);
+    m_AudioSource.PlayDelayed(0.5f);
 
     if (m_StateMachine.GetState() == "penalty") {
-      m_StateMachine.DelayedTransitionTo("playing", clip.length + 0.8f);
+      Debug.Log("delaying penalty to playing");
+      StartCoroutine(m_StateMachine.DelayedTransitionTo("playing", clip.length + 0.5f));
     }
   }
 
@@ -153,8 +156,8 @@ public class PlayerMutter : MonoBehaviour {
     } else {
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
       m_AudioSource.clip = clip;
-      m_AudioSource.PlayDelayed(0.8f);
-      StartCoroutine(m_StateMachine.DelayedTransitionTo("playing", 0.8f + clip.length));
+      m_AudioSource.PlayDelayed(0.5f);
+      StartCoroutine(m_StateMachine.DelayedTransitionTo("playing", 0.5f + clip.length));
     }
   }
 
@@ -166,8 +169,8 @@ public class PlayerMutter : MonoBehaviour {
     } else {
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
       m_AudioSource.clip = clip;
-      m_AudioSource.PlayDelayed(0.8f);
-      StartCoroutine(m_StateMachine.DelayedTransitionTo("nextlevel", 0.8f + clip.length));
+      m_AudioSource.Play();
+      StartCoroutine(m_StateMachine.DelayedTransitionTo("nextlevel", clip.length));
     }
   }
 
@@ -179,8 +182,8 @@ public class PlayerMutter : MonoBehaviour {
     } else {
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
       m_AudioSource.clip = clip;
-      m_AudioSource.PlayDelayed(0.8f);
-      StartCoroutine(m_StateMachine.DelayedTransitionTo("replaylevel", 0.8f + clip.length));
+      m_AudioSource.Play();
+      StartCoroutine(m_StateMachine.DelayedTransitionTo("replaylevel", clip.length));
     }
   }
 

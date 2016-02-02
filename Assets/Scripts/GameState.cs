@@ -9,15 +9,16 @@ using System.Linq;
 // gameState.OnTransition("start", "play", (newState) => { Debug.Log("start => play"); });
 // gameState.on("gameover", OnGameOver);
 // void OnGameOver(newState) { Debug.Log("Game over man!"); }
+
 /* States:
 - init (default)
 - intro
 - playing
+- penalty
 - win
 - lose
 - replaylevel
 - nextlevel
-- quit
 */
 
 public class GameState {
@@ -88,11 +89,11 @@ public class GameState {
     var enterState = newState;
     var transition = currentState + " => " + newState;
     var exitState = "exit-" + currentState;
-    var transitions = new string[] {enterState, transition, exitState};
     List<System.Action<string>> someCallbacks;
-Debug.Log("STATE: " + transition);
     currentState = newState;
     isWaitingForTransition = false;
+
+    Debug.Log("STATE: " + transition);
 
     // Look up exit handlers & fire callbacks.
     someCallbacks = _getCallbacks(exitState);

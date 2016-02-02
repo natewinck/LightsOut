@@ -8,12 +8,12 @@ public class SoundTrigger : MonoBehaviour {
   public bool IsOneShot;
   public List<AudioClip> SoundBank;
 
-  private ShuffleDeck soundDeck;
+  private ShuffleDeck<AudioClip> soundDeck;
   private AudioSource source;
 
   // Use this for initialization
   void Awake () {
-    soundDeck = new ShuffleDeck(SoundBank);
+    soundDeck = new ShuffleDeck<AudioClip>(SoundBank);
     source = GetComponent<AudioSource>();
   }
 
@@ -26,7 +26,7 @@ public class SoundTrigger : MonoBehaviour {
     //Debug.Log ("Hello");
     if (c.CompareTag("Player") && !source.isPlaying) {
       // Pull a random clip from the list of sounds
-      var clip = (AudioClip) soundDeck.Draw();
+      var clip = soundDeck.Draw();
 
       if (clip == null) {
         if (IsOneShot) DisableSelf();

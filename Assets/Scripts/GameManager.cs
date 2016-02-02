@@ -31,13 +31,14 @@ public class GameManager : MonoBehaviour {
     gameState.On("nextlevel", OnNextLevel);
     gameState.On("replaylevel", OnReplayLevel);
 
-    gameState.On("intro", (_) => playerAudioOnly.TransitionTo(0.5f));
-    gameState.On("win", (_) => playerAudioOnly.TransitionTo(0.5f));
-    gameState.On("lose", (_) => playerAudioOnly.TransitionTo(0.5f));
-    gameState.On("playing", (_) => fullVolume.TransitionTo(0.5f));
+    gameState.On("intro", _ => playerAudioOnly.TransitionTo(0.5f));
+    gameState.On("win", _ => playerAudioOnly.TransitionTo(0.5f));
+    gameState.On("lose", _ => playerAudioOnly.TransitionTo(0.5f));
+    gameState.On("playing", _ => fullVolume.TransitionTo(0.5f));
   }
 
   void Update () {
+    // Quit on Escape key.
     if (Input.GetKeyDown(KeyCode.Escape)) {
       Debug.Log("Quit pressed!");
       Application.Quit();
