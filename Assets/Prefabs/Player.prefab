@@ -101,8 +101,8 @@ GameObject:
   - 4: {fileID: 452658}
   - 143: {fileID: 14398356}
   - 54: {fileID: 5463956}
-  - 82: {fileID: 8250742}
   - 114: {fileID: 11471578}
+  - 82: {fileID: 8250742}
   - 136: {fileID: 13618318}
   - 114: {fileID: 11413048}
   m_Layer: 0
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_IsWalking: 0
   m_WalkSpeed: 4
   m_RunSpeed: 3
-  m_TurnSpeed: 180
+  m_TurnSpeed: 170
   m_RunstepLenghten: 0.7
   m_AllowJump: 0
   m_JumpSpeed: 10
