@@ -20,12 +20,12 @@ public class SoundBank : MonoBehaviour
   }
   public List<NamedClips> SoundList;
 
-  private Dictionary<string, ShuffleDeck> _soundDecks;
+  private Dictionary<string, ShuffleDeck<AudioClip>> _soundDecks;
 
   void Awake () {
-    _soundDecks = new Dictionary<string, ShuffleDeck>();
+    _soundDecks = new Dictionary<string, ShuffleDeck<AudioClip>>();
     foreach (var namedClip in SoundList) {
-      _soundDecks[namedClip.name] = new ShuffleDeck(namedClip.clipList);
+      _soundDecks[namedClip.name] = new ShuffleDeck<AudioClip>(namedClip.clipList);
     }
   }
 
@@ -37,14 +37,12 @@ public class SoundBank : MonoBehaviour
   public List<AudioClip> Draw(string kind, int count)
   {
     if (!_soundDecks.ContainsKey(kind)) return new List<AudioClip>();
-
-    List<AudioClip> clips = _soundDecks[kind].Draw(count).Cast<AudioClip>().ToList();
-    return clips;
+    return _soundDecks[kind].Draw(count);
   }
 
   public List<AudioClip> DrawAll (string kind) {
     if (!_soundDecks.ContainsKey(kind)) return new List<AudioClip>();
-    return _soundDecks[kind].DrawAll().Cast<AudioClip>().ToList();
+    return _soundDecks[kind].DrawAll();
   }
 
   // Update is called once per frame

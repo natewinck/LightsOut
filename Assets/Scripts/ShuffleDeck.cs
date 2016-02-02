@@ -1,50 +1,90 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
-public class ShuffleDeck {
-  public int lastReshuffle;
-  private ArrayList _cards;
-  private int _nextCard;
-
-  public ShuffleDeck(IEnumerable list) {
-    _cards = new ArrayList();
-    foreach (var item in list) {
-      Add(item);
-    }
-    Reshuffle();
+// Easy collections of objects that won't repeat until they've all been used.
+public class ShuffleDeck<T> {
+  public struct ShuffleState {
+    public int shuffleCount;
+    public int seed;
+    public int nextCardNum;
   }
+  // SAVE AND RESTORE STATE IS UNTESTED
+  public ShuffleState State {
+    get { return _state; }
+    set {
+      _state = value;
+      _rng = new System.Random(_state.seed);
+
+      // Prime the RNG sequence. Fast-forward by number of cards drawn.
+      var decksDrawnCount = _cards.Count * _state.shuffleCount;
+      for (var i = decksDrawnCount; i >= 0; i--) {
+        _rng.Next();
+      }
+      Reshuffle(_rng);
+    }
+  }
+  public int Count { get { return _cards.Count; } }
+
+  private ShuffleState _state;
+  private List<T> _cards;
+  private System.Random _rng;
 
   public ShuffleDeck() {
-    _cards = new ArrayList();
+    _cards = new List<T>();
+  }
+  public ShuffleDeck(IEnumerable<T> list) {
+    _cards = new List<T>(list);
+    _state.seed = Random.Range(int.MinValue, int.MaxValue);
+    _rng = new System.Random(_state.seed);
+    Reshuffle(_rng);
   }
 
-  public int Count {
-    get { return _cards.Count; }
+  public ShuffleDeck<T> Add(T item) { _cards.Add(item); return this; }
+  public ShuffleDeck<T> Remove(T item) { _cards.Remove(item); return this; }
+  public ShuffleDeck<T> Sort() { _cards.Sort(); return this; }
+
+  public void SetSeed(int seed) {
+    _state.seed = seed;
+    _rng = new System.Random(_state.seed);
   }
 
-  public ShuffleDeck Add(object item) { _cards.Add(item); return this; }
-  public ShuffleDeck Remove(object item) { _cards.Remove(item); return this; }
-  public ShuffleDeck Sort() { _cards.Sort(); return this; }
+  public ShuffleDeck<T> Reshuffle() {
+    return Reshuffle(_rng);
+  }
+  public ShuffleDeck<T> Reshuffle(System.Random shuffleRNG) {
+    _state.nextCardNum = 0;
+    _state.shuffleCount++;
 
-  public ShuffleDeck Reshuffle() {
-    var newDeck = new ArrayList();
-    while (_cards.Count > 0) {
-      var idx = Random.Range(0, _cards.Count);
-      newDeck.Add(_cards[idx]);
-      _cards.RemoveAt(idx);
+    if (_cards.Count <= 1) return this;
+
+    var lastCard = _cards.Last();
+
+    for(var i = 0; i < _cards.Count; i++) {
+      var j = shuffleRNG.Next(i, _cards.Count);
+      var temp = _cards[i];
+      _cards[i] = _cards[j];
+      _cards[j] = temp;
     }
-    _cards = newDeck;
-    _nextCard = 0;
-    lastReshuffle++;
+
+    // If the first card of the new deck is the last card of the old deck,
+    // reshuffle to avoid hitting the same card twice in a row across
+    // shuffles. Not 100% foolproof. Not good for actual card decks. Expensive?
+    // Friendly to save/restore state.
+    if (EqualityComparer<T>.Default.Equals(_cards.First(), lastCard)) {
+      return Reshuffle();
+    }
+
     return this;
   }
 
-  public ArrayList DrawAll() {
+  public List<T> DrawAll() {
     return Draw (_cards.Count);
   }
 
-  public ArrayList Draw(int count) {
-    var hand = new ArrayList();
+  public List<T> Draw(int count) {
+    var hand = new List<T>();
     if (count > _cards.Count) count = _cards.Count;
 
     while (hand.Count < count) {
@@ -55,13 +95,13 @@ public class ShuffleDeck {
     return hand;
   }
 
-  public object Draw() {
-    if (_cards.Count == 0) return null;
+  public T Draw() {
+    if (_cards.Count == 0) return default(T);
 
-    if (_nextCard >= _cards.Count) {
+    if (_state.nextCardNum >= _cards.Count) {
       Reshuffle();
     }
-
-    return _cards[_nextCard++];
+Debug.Log("drawing card " + _state.nextCardNum + " of " + _cards.Count);
+    return _cards[_state.nextCardNum++];
   }
 }
