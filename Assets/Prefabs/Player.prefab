@@ -30,7 +30,7 @@ GameObject:
   - 23: {fileID: 2360036}
   - 54: {fileID: 5480200}
   - 114: {fileID: 11430814}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,8 +67,25 @@ GameObject:
   - 23: {fileID: 2361538}
   - 54: {fileID: 5454790}
   - 114: {fileID: 11408270}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &139714
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 464668}
+  - 82: {fileID: 8287512}
+  - 114: {fileID: 11470896}
+  m_Layer: 0
+  m_Name: AudioMutter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +140,7 @@ GameObject:
   - 82: {fileID: 8225398}
   - 114: {fileID: 11474090}
   m_Layer: 0
-  m_Name: AudioMutter
+  m_Name: AudioMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,11 +220,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159102}
   m_LocalRotation: {x: 0, y: -0.000000029802322, z: -0.70710665, w: 0.70710695}
-  m_LocalPosition: {x: -0, y: 0.367, z: 0.4579}
+  m_LocalPosition: {x: -0, y: 0.36699998, z: 0.45790005}
   m_LocalScale: {x: 0.5, y: 0.25, z: 0.5}
   m_Children: []
   m_Father: {fileID: 473558}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &432404
 Transform:
   m_ObjectHideFlags: 1
@@ -272,6 +289,18 @@ Transform:
   - {fileID: 473558}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &464668
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139714}
+  m_LocalRotation: {x: 0, y: -0.000000029802322, z: -0.70710665, w: 0.70710695}
+  m_LocalPosition: {x: -0, y: 0.367, z: 0.4579}
+  m_LocalScale: {x: 0.5, y: 0.25, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 473558}
+  m_RootOrder: 4
 --- !u!4 &473558
 Transform:
   m_ObjectHideFlags: 1
@@ -286,6 +315,7 @@ Transform:
   - {fileID: 445362}
   - {fileID: 432404}
   - {fileID: 442188}
+  - {fileID: 464668}
   - {fileID: 406926}
   m_Father: {fileID: 452658}
   m_RootOrder: 1
@@ -732,7 +762,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.13
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -943,6 +973,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &8287512
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139714}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 28971ac92284348b79e432abd448278f,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1.005
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11408270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -954,6 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280fbc329e5284035932c33323405945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MaxVolume: 0.15
 --- !u!114 &11409622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1077,6 +1183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280fbc329e5284035932c33323405945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MaxVolume: 0.15
 --- !u!114 &11464550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1088,7 +1195,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e880c4327d112284eb446ff0a635bedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AudioSource: {fileID: 8225398}
+  m_MutterAudioSource: {fileID: 8287512}
+  m_MusicAudioSource: {fileID: 8225398}
+  m_WinMusic: {fileID: 8300000, guid: beeeac1655fed164697e73199558642d, type: 3}
+  m_LoseMusic: {fileID: 8300000, guid: ce615edb4745649699c1ed1a806e20bd, type: 3}
 --- !u!114 &11467010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1103,6 +1213,23 @@ MonoBehaviour:
   enableSpatialization: 1
   gain: 0
   useInvSqr: 1
+  near: 1
+  far: 10
+  disableRfl: 0
+--- !u!114 &11470896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 0
+  gain: 0
+  useInvSqr: 0
   near: 1
   far: 10
   disableRfl: 0
@@ -1248,7 +1375,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124080}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -1261,7 +1388,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137958}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
