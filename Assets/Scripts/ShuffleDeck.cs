@@ -101,7 +101,7 @@ public class ShuffleDeck<T> {
     if (_state.nextCardNum >= _cards.Count) {
       Reshuffle();
     }
-Debug.Log("drawing card " + _state.nextCardNum + " of " + _cards.Count);
+
     return _cards[_state.nextCardNum++];
   }
 }

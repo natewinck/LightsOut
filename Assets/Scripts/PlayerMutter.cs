@@ -35,7 +35,10 @@ on "lose":
 */
 
 public class PlayerMutter : MonoBehaviour {
-  public AudioSource m_AudioSource;
+  public AudioSource m_MutterAudioSource;
+  public AudioSource m_MusicAudioSource;
+  public AudioClip m_WinMusic;
+  public AudioClip m_LoseMusic;
 
   private GameManager m_GameManager;
   private GameState m_StateMachine;
@@ -75,34 +78,13 @@ public class PlayerMutter : MonoBehaviour {
     }
   }
 
-  // Used with the Character Controller
-  void OnControllerColliderHit(ControllerColliderHit hit)
-  {
-
-    //Debug.Log ("Hello");
-    /*if (hit.gameObject.CompareTag("Wall") && hit.gameObject.GetComponent<SoundBank>() != null)
-    {
-      // So we don't keep changing the audio clips when we're on the same floor,
-      // Store the object as a reference
-      m_CurrentWall = hit.gameObject;
-
-      // Get the audio source from the wall
-      AudioClip clip = hit.gameObject.GetComponent<SoundBank> ().Draw();
-
-      // Replace the clip in the first person controller for feet
-      GetComponent<UnityStandardAssets.Characters.FirstPerson.TankPersonController>().ChangeFootstepSounds(clips);
-
-      // That's it
-    }*/
-  }
-
   void OnTriggerEnter(Collider other) {
     Debug.Log (other.name);
     var otherSoundBank = other.GetComponent<SoundBank>();
 
     CheckPenalty(otherSoundBank, other);
 
-    if (otherSoundBank != null && !m_AudioSource.isPlaying) {
+    if (otherSoundBank != null && !m_MutterAudioSource.isPlaying) {
       PlayMutter(otherSoundBank, other);
     }
 
@@ -115,8 +97,8 @@ public class PlayerMutter : MonoBehaviour {
     // Check for soundbank clip type "penalty1", "penalty2"
     var clip = m_SoundBank.Draw("penalties" + penaltyCount);
     if (clip != null) {
-      m_AudioSource.clip = clip;
-      m_AudioSource.PlayDelayed(0.25f);
+      m_MutterAudioSource.clip = clip;
+      m_MutterAudioSource.PlayDelayed(0.25f);
     }
   }
 
@@ -126,8 +108,8 @@ public class PlayerMutter : MonoBehaviour {
     if (clip == null) return;
 
     // Get the child of this (which should be the hand) and add this audio clip to it, then play
-    m_AudioSource.clip = clip;
-    m_AudioSource.PlayDelayed(0.5f);
+    m_MutterAudioSource.clip = clip;
+    m_MutterAudioSource.PlayDelayed(0.5f);
 
     if (m_StateMachine.GetState() == "penalty") {
       Debug.Log("delaying penalty to playing");
@@ -155,8 +137,8 @@ public class PlayerMutter : MonoBehaviour {
       m_StateMachine.TransitionTo("playing");
     } else {
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
-      m_AudioSource.clip = clip;
-      m_AudioSource.PlayDelayed(0.5f);
+      m_MutterAudioSource.clip = clip;
+      m_MutterAudioSource.PlayDelayed(0.5f);
       StartCoroutine(m_StateMachine.DelayedTransitionTo("playing", 0.5f + clip.length));
     }
   }
@@ -167,10 +149,11 @@ public class PlayerMutter : MonoBehaviour {
     if (clip == null) {
       m_StateMachine.TransitionTo("nextlevel");
     } else {
-      // Get the child of this (which should be the hand) and add this audio clip to it, then play
-      m_AudioSource.clip = clip;
-      m_AudioSource.Play();
-      StartCoroutine(m_StateMachine.DelayedTransitionTo("nextlevel", clip.length));
+      m_MutterAudioSource.clip = clip;
+      m_MusicAudioSource.clip = m_WinMusic;
+      m_MutterAudioSource.PlayDelayed(0.5f);
+      m_MusicAudioSource.PlayDelayed(0.5f);
+      StartCoroutine(m_StateMachine.DelayedTransitionTo("nextlevel", m_WinMusic.length + 0.5f));
     }
   }
 
@@ -180,75 +163,12 @@ public class PlayerMutter : MonoBehaviour {
     if (clip == null) {
       m_StateMachine.TransitionTo("replaylevel");
     } else {
-      // Get the child of this (which should be the hand) and add this audio clip to it, then play
-      m_AudioSource.clip = clip;
-      m_AudioSource.Play();
-      StartCoroutine(m_StateMachine.DelayedTransitionTo("replaylevel", clip.length));
+      m_MutterAudioSource.clip = clip;
+      m_MusicAudioSource.clip = m_LoseMusic;
+      m_MutterAudioSource.PlayDelayed(0.5f);
+      m_MusicAudioSource.PlayDelayed(0.5f);
+      StartCoroutine(m_StateMachine.DelayedTransitionTo("replaylevel", m_LoseMusic.length));
     }
   }
 
-
-
-      /*
-  void OnCollisionEnter(Collision collision)
-  {
-    //Debug.Log ("I'm collisioning with " + collision.gameObject.name);
-    if (collision.gameObject.CompareTag("MutterBox") && collision.gameObject.GetComponent<SoundBank>() != null)
-    {
-      Debug.Log ("I'm collisioning with Mutter Box");
-      // So we don't keep changing the audio clips when we're on the same floor,
-      // Store the object as a reference
-      m_CurrentWall = collision.gameObject;
-
-      // Get the audio source from the wall
-      AudioClip clip = m_CurrentWall.GetComponent<SoundBank> ().Draw(SoundBank.MUTTERS);
-
-      // Get the child of this (which should be the hand) and add this audio clip to it, then play
-      m_AudioSource.clip = clip;
-      m_AudioSource.Play ();
-
-      // Replace the clip in the first person controller for feet
-      //GetComponent<UnityStandardAssets.Characters.FirstPerson.TankPersonController>().ChangeFootstepSounds(clips);
-
-      // That's it
-    }
-  }
-
-*/
-
-  void OnCollisionStay(Collision collision)
-  {
-    // Vector3 velocity = collision.relativeVelocity;
-    // The above does not work because the Player is moving, not the hands (though they are in absolute space)
-    // Only play audio when the velocity when we're moving
-    //Debug.Log(velocity.x + ", " + velocity.y + ", " + velocity.z);
-    //Debug.Log(velocity.magnitude);
-    /*if (!m_IsMoving)
-    {
-      if (m_AudioSource.isPlaying)
-      {
-        m_AudioSource.Stop ();
-      }
-    }
-    else if (m_IsMoving && collision.gameObject.CompareTag("Wall")) // if velocity is not zero
-    {
-      Debug.Log ("hitting");
-      if (!m_AudioSource.isPlaying)
-      {
-        m_AudioSource.Play ();
-      }
-    }*/
-  }
-
-  void OnCollisionExit(Collision collision)
-  {
-    /*//Debug.Log ("exiting");
-    // We're no longer in this collider so stop playing the sound
-    if (m_AudioSource.isPlaying && collision.gameObject.CompareTag("Wall"))
-    {
-      Debug.Log ("exiting");
-      m_AudioSource.Stop ();
-    }
-    */
-  }
 }

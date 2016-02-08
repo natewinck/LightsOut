@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
   public AudioMixerSnapshot playerAudioOnly;
   public AudioMixerSnapshot fullVolume;
 
-  [FormerlySerializedAs("PenaltiesBeforeLoss")]
   public int penaltiesBeforeLoss = 3;
   [System.NonSerialized]
   public int penaltyCount;
