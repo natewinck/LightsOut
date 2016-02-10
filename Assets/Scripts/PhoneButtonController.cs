@@ -6,13 +6,9 @@ public class PhoneButtonController : MonoBehaviour {
   public UnityStandardAssets.Characters.FirstPerson.TankPersonController tankPersonController;
   public PhoneOrientation phoneOrientation;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+#if UNITY_ANDROID
+
+  void Update () {
     if (Input.touchCount > 0) {
       if(Input.GetTouch (0).position.x / Screen.width > 0.9f) {
         // Get movement of the finger since last frame
@@ -26,7 +22,7 @@ public class PhoneButtonController : MonoBehaviour {
     } else {
       tankPersonController.StopPushForward();
     }
-	}
+  }
 
   void OnPointerDown() {
     Debug.Log ("clicked");
@@ -36,4 +32,6 @@ public class PhoneButtonController : MonoBehaviour {
     Debug.Log ("Up");
 
   }
+
+#endif
 }

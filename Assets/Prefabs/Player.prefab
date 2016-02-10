@@ -122,6 +122,7 @@ GameObject:
   - 82: {fileID: 8250742}
   - 136: {fileID: 13618318}
   - 114: {fileID: 11413048}
+  - 114: {fileID: 11405448}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1048,6 +1049,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11405448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117af46ba613e40bbb25cbad62b425f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 2
+  tiltAngle: 90
 --- !u!114 &11408270
 MonoBehaviour:
   m_ObjectHideFlags: 1
