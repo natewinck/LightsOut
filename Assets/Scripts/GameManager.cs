@@ -44,6 +44,11 @@ public class GameManager : MonoBehaviour {
       Debug.Log("Quit pressed!");
       Application.Quit();
     }
+
+    if (Input.GetKeyDown(KeyCode.R)) {
+      Debug.Log("R pressed!");
+      gameState.TransitionTo("restartgame");
+    }
   }
 
   void OnPenalty(string oldState) {
@@ -59,8 +64,14 @@ public class GameManager : MonoBehaviour {
     Debug.Log("Scene " + scene.buildIndex + " of " + SceneManager.sceneCount + " finished. Next level!");
     if (scene.buildIndex == SceneManager.sceneCountInBuildSettings - 1) {
       // Play "all done" sound? Credits?
-      Debug.Log("No more levels! Quitting!");
-      Application.Quit();
+      #if UNITY_ANDROID
+        // Loop to beginning of game on mobile.
+        Debug.Log("Restarting game from the top.");
+        SceneManager.LoadScene(0);
+      #else
+        Debug.Log("No more levels! Quitting!");
+        Application.Quit();
+      #endif
     } else {
       // Load the next scene per build order in Build Settings.
       SceneManager.LoadScene(scene.buildIndex + 1);
