@@ -23,12 +23,14 @@ public class GameManager : MonoBehaviour {
   void Awake() {
     GameManager._instance = this;
     gameState = new GameState();
+    Screen.sleepTimeout = SleepTimeout.NeverSleep;
   }
 
   void Start () {
     gameState.On("penalty", OnPenalty);
     gameState.On("nextlevel", OnNextLevel);
     gameState.On("replaylevel", OnReplayLevel);
+    gameState.On("restartgame", OnRestartGame);
 
     gameState.On("intro", _ => playerAudioOnly.TransitionTo(0.5f));
     gameState.On("win", _ => playerAudioOnly.TransitionTo(0.5f));
@@ -52,12 +54,6 @@ public class GameManager : MonoBehaviour {
     }
   }
 
-  // Reload current scene.
-  void OnReplayLevel(string oldState) {
-    Debug.Log("Reloading level for retry.");
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-  }
-
   void OnNextLevel(string oldState) {
     var scene = SceneManager.GetActiveScene();
     Debug.Log("Scene " + scene.buildIndex + " of " + SceneManager.sceneCount + " finished. Next level!");
@@ -70,4 +66,16 @@ public class GameManager : MonoBehaviour {
       SceneManager.LoadScene(scene.buildIndex + 1);
     }
   }
+
+  // Reload current scene.
+  void OnReplayLevel(string oldState) {
+    Debug.Log("Reloading level for retry.");
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+  }
+
+  void OnRestartGame(string oldState) {
+    Debug.Log("Restarting game at scene 0");
+    SceneManager.LoadScene(0);
+  }
+
 }
