@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 443488}
   - 114: {fileID: 11470368}
   - 114: {fileID: 11418636}
+  - 114: {fileID: 11435118}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -42,7 +43,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundList:
   - name: intros
-    clipList: []
+    clipList:
+    - {fileID: 8300000, guid: 4d182ac735ecb864d86e88e3eb854f48, type: 3}
+--- !u!114 &11435118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54ebe90e9c5b4df382d27a9ae9d1fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankPersonController: {fileID: 0}
+  resetTimeout: 4
 --- !u!114 &11470368
 MonoBehaviour:
   m_ObjectHideFlags: 1

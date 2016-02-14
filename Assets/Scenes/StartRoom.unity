@@ -249,6 +249,10 @@ Prefab:
       propertyPath: SoundList.Array.data[0].clipList.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 62e9429c84a3235499e557b7cae67ac2, type: 3}
+    - target: {fileID: 11435118, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
+      propertyPath: tankPersonController
+      value: 
+      objectReference: {fileID: 1428306949}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f25f36d7a23a33c498e43961ca87eae9, type: 2}
   m_IsPrefabParent: 0
@@ -430,3 +434,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b200f519ba9b4614891a2f5fca1c388c, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1428306949 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11471578, guid: b200f519ba9b4614891a2f5fca1c388c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1428306948}
+  m_Script: {fileID: 11500000, guid: fdf653a5df357ee4f965611e19690e60, type: 3}
