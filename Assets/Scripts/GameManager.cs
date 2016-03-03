@@ -3,10 +3,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using System.Collections;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
   public AudioMixerSnapshot playerAudioOnly;
   public AudioMixerSnapshot fullVolume;
+
+  public CanvasGroup canvasToFadeOut;
 
   public int penaltiesBeforeLoss = 3;
   [System.NonSerialized]
@@ -24,6 +27,10 @@ public class GameManager : MonoBehaviour {
     GameManager._instance = this;
     gameState = new GameState();
     Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+    #if UNITY_ANDROID
+      Input.compass.enabled = true;
+    #endif
   }
 
   void Start () {
@@ -67,14 +74,15 @@ public class GameManager : MonoBehaviour {
       #if UNITY_ANDROID
         // Loop to beginning of game on mobile.
         Debug.Log("Restarting game from the top.");
-        SceneManager.LoadScene(0);
+        FadeOut(() => SceneManager.LoadScene(0));
       #else
         Debug.Log("No more levels! Quitting!");
         Application.Quit();
       #endif
     } else {
       // Load the next scene per build order in Build Settings.
-      SceneManager.LoadScene(scene.buildIndex + 1);
+      FadeOut(() => SceneManager.LoadScene(scene.buildIndex + 1));
+      // SceneManager.LoadScene(scene.buildIndex + 1);
     }
   }
 
@@ -89,4 +97,11 @@ public class GameManager : MonoBehaviour {
     SceneManager.LoadScene(0);
   }
 
+  private void FadeOut(System.Action done) {
+    if (canvasToFadeOut == null) {
+      done();
+    } else {
+      LeanTween.value(canvasToFadeOut.gameObject, value => canvasToFadeOut.alpha = value, 1.0f, 0f, 1.0f).setOnComplete(done);
+    }
+  }
 }

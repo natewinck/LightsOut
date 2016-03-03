@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 
+// If player is moving and has their hand in a wall, bring volume up.
+
 public class PlayerWallBrush : MonoBehaviour {
   [RangeAttribute(0.0f, 1.0f)]
   public float m_MaxVolume = 0.5f;
 
+  private GameObject player;
   private GameObject m_CurrentWall;
   private AudioSource m_HandAudioSource; // Child object of this one
   private Vector3 m_LastPos;
@@ -26,9 +29,14 @@ public class PlayerWallBrush : MonoBehaviour {
     m_HandAudioSource.volume = 0.0f;
   }
 
+  void Start() {
+    player = GameObject.Find("Player");
+  }
+
   void Update()
   {
-    Vector3 currentPosition = transform.position;
+    Vector3 currentPosition = player.transform.position;
+    // Vector3 currentPosition = transform.position;
     // If this position is the same as the last position recorded...
     //Debug.Log("Difference: " + (currentPosition.z - m_LastPos.z).ToString());
     var wasMoving = m_IsMoving;
@@ -43,6 +51,7 @@ public class PlayerWallBrush : MonoBehaviour {
     StopAllCoroutines();
 
     if (startedMoving) {
+Debug.Log("Raising volume on move, wallcount: " + m_WallCount);
       StartCoroutine(RaiseVolume(0.5f));
     } else {
       StartCoroutine(LowerVolume(0.3f));
@@ -66,9 +75,9 @@ public class PlayerWallBrush : MonoBehaviour {
       // Get the child of this (which should be the hand) and add this audio clip to it, then play
       m_HandAudioSource.clip = clip;
       m_HandAudioSource.Play ();
-
-      StopAllCoroutines ();
-      StartCoroutine (RaiseVolume(0.25f));
+Debug.Log("Raising volume on trigger enter");
+      // StopAllCoroutines ();
+      // StartCoroutine (RaiseVolume(0.25f));
 
 
     }
